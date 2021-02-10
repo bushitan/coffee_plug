@@ -1,6 +1,8 @@
 {
   "publicComponents": {
-    "hello-component": "components/hello-component"
+    "coupon": "components/coupon/coupon",
+    "dialog": "components/dialog/dialog",
+    "dialog-cover": "components/dialog-cover/dialog-cover"
   },
   "pages": {
     "hello-page": "pages/hello-page"

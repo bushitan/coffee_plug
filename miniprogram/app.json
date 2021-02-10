@@ -3,10 +3,15 @@
         "pages/index/index"
     ],
     "plugins": {
-        "hello-plugin": {
+        "liteCupPlugin": {
             "version": "dev",
             "provider": "wxd19bbe9cb3b293b6"
         }
     },
+
+    "usingComponents": {
+        "dialog": "plugin://liteCupPlugin/dialog"
+    },
+
     "sitemapLocation": "sitemap.json"
 }
