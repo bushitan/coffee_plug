@@ -1,11 +1,11 @@
 {
   "publicComponents": {
-    "coupon": "components/coupon/coupon",
-    "dialog": "components/dialog/dialog",
-    "dialog-cover": "components/dialog-cover/dialog-cover"
+    "coupon-list": "components/coupon/list/list",
+    "dialog": "components/common/dialog/dialog",
+    "dialog-cover": "components/common/dialog-cover/dialog-cover"
   },
   "pages": {
     "hello-page": "pages/hello-page"
   },
-  "main": "index.js"
+  "main": "js/route.js"
 }

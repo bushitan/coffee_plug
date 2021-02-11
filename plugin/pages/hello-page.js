@@ -8,7 +8,7 @@ Page({
       console.log('This is a plugin page!')
       console.log(options)
 
-      console.log(getApp())
+    //   console.log(getApp())
 
 
       // var a = wx.setStorageSync('number',123)

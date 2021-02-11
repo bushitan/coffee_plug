@@ -6,4 +6,7 @@
 
 <!-- <hello-list items="{{ items }}" /> -->
 
-<dialog></dialog>
+<view class="theme-yellow">
+    <dialog show="{{true}}"></dialog>
+
+</view>
