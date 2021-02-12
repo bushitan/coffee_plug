@@ -1,0 +1,11 @@
+
+<view class="padding-lr margin-top">
+    <view class="padding-sm flex justify-between align-center margin-top  bg-white radius text-sm {{isShadow?'shadow shadow-lg':''}}" catchtap="click">
+        <view class="title text-cut">
+            <text class="cuIcon-{{icon}} theme-text margin-right-xs"></text>
+            <text class="picker">{{text}}</text> 
+        </view>           
+        <view class="cuIcon-right text-gray"></view>
+    </view>
+</view>
+

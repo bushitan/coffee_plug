@@ -1,0 +1,7 @@
+
+
+<bar list="{{tabMatrix[0].list}}" bg="bg-black" text="text-yellow" bindclick="clickbar"></bar>
+
+<bar-date></bar-date>
+
+<tabbar matrix="{{tabMatrix}}" index="{{tabbarIndex}}" bindclick="clickTabbar"  bg="bg-black" text="text-red"></tabbar>

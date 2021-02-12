@@ -1,0 +1,14 @@
+<!--components/bar/bar.wxml-->
+
+<!-- wx:for="{{list}}" wx:key catchtap="click" data-index="{{index}}" -->
+<view class="flex justify-center " >
+    <view class="coupon bg-yellow text-black pg-radius ">
+        <view class="coupon-info padding coupon-hole bg-white  ">
+            <view class="text-bold text-xl  ">{{name}}</view>
+            <view class="text-gray">{{desc}}</view>
+            <view class="text-gray text-sm margin-top-sm">有效期：{{startTime}}至{{endTime}}</view>
+        </view>
+        <view class="flex align-center padding-lr-xl bg-red text-xxl text-bold ">{{discount}}</view>
+    </view>
+</view>
+

@@ -1,12 +1,47 @@
+
+
+
+<view class="theme-yellow">
+
+ 
+
+    <include src="wxml/1_common.wxml" />
+    <!-- <include src="wxml/2_nav.wxml" /> -->
+    <!-- <include src="wxml/3_bar.wxml" /> -->
+    <!-- <include src="wxml/4_card.wxml" /> -->
+    <!-- <include src="wxml/5_menu.wxml" /> -->
+    <!-- <include src="wxml/6_order.wxml" /> -->
+    <!-- <include src="wxml/7_coupon.wxml" /> -->
+    <!-- <include src="wxml/8_store.wxml" /> -->
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
 <navigator id="nav" url="plugin://liteCupPlugin/hello-page?userToken={{userToken}}">
   Go to Plugin page
 </navigator>
 
-<button id="add" bindtap="addItem">Add item</button>
+<button id="add" bindtap="addItem">Add item</button> -->
 
 <!-- <hello-list items="{{ items }}" /> -->
-
-<view class="theme-yellow">
-    <dialog show="{{true}}"></dialog>
-
-</view>

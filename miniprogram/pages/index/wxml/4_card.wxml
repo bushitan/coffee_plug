@@ -1,0 +1,10 @@
+<view class="padding-lr margin-top " wx:for="{{carArtList}}">
+    <card-image 
+        image="{{item.image}}"
+        name="{{item.name}}"
+        desc="{{item.desc}}"
+    >
+        <text class="theme-text"> {{item.summary}}</text>
+        <button class='cu-btn round theme-bg text-white' catchtap="clickCard" data-index="{{index}}" >购买</button>
+    </card-image>
+</view>

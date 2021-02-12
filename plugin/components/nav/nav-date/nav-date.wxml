@@ -1,0 +1,43 @@
+
+
+<!-- 日期导航栏 -->
+
+
+
+<view class="cu-custom text-white " style="height:{{CustomBar}}px"  >
+    <view class="cu-bar fixed {{bgImage!=''?'none-bg text-white bg-img':''}} theme-bg" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;{{bgImage?'background-image:url(' + bgImage+')':''}}" >
+        <view class="action" bindtap="BackPage">
+            <text class="cuIcon-back"></text>
+            <slot name="backText"></slot>
+        </view>
+        <view class="action" style="top:{{StatusBar}}px" catchtap="clickDate">
+            <text class="text-xs" >                    
+                <text class=" ">{{startTime}}</text>至<text class=" ">{{endTime}} </text><text class="cuIcon-unfold "></text>
+            </text>
+        </view>       
+        <slot name="right"></slot>   
+    </view>
+</view>
+
+<dialog show="{{showDialog}}" title="查询时间范围"  textConfirm="查询" bindsuccess="dialogConfirm">
+
+    <form bindsubmit="getQuery" class="">
+        <picker mode="date" value="{{starttoday}}" name="startDate" bindchange="startDateEvent" >
+        <view class="cu-bar bg-white search  padding-lr text-sm">
+            <view>开始日期</view>          
+                <text class="">
+                    <text>{{starttoday}}</text><text class="cuIcon-unfold "></text>
+                </text>
+        </view>
+            </picker>
+        
+        <picker mode="date"  value="{{endtoday}}" name="endDate"  bindchange="endDateEvent" >
+            <view class="cu-bar bg-white search  padding-lr text-sm">
+                <view>结束日期</view>           
+                <text class="">
+                    <text>{{endtoday}}</text><text class="cuIcon-unfold "></text>
+                </text>
+            </view>
+        </picker>   
+    </form>    
+</dialog>

@@ -1,0 +1,33 @@
+<!--components/tabbar/tabbar.wxml-->
+
+<view class="cu-bar tabbar shadow foot  {{bg}}">
+  <view class="action" bindtap="NavChange" data-cur="{{cur}}" wx:for="{{matrix}}" wx:for-index="cur" wx:key>
+    <view class='cuIcon-cu-image'>
+      <image src="{{item.select}}" wx:if="{{ TabCur == cur }}"></image>
+      <image src="{{item.unSelect}}" wx:else></image>
+    </view>
+    <view class="{{  TabCur == cur ? text :'text-gray'}}">{{item.name}}</view>
+  </view>
+</view>
+
+
+
+
+  <!-- <view class="action" bindtap="NavChange" data-cur="component">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/component{{PageCur=='component'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='component'?'text-green':'text-gray'}}">组件</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="plugin">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/plugin{{PageCur=='plugin'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='plugin'?'text-green':'text-gray'}}">扩展</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="about">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/about{{PageCur=='about'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='about'?'text-green':'text-gray'}}">关于</view>
+  </view> -->

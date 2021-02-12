@@ -1,0 +1,13 @@
+
+
+<view wx:for="{{storeList}}" class="margin-top padding-lr "> 
+    <store-node
+        name="{{item.name}}"
+        address="{{item.address}}"
+        status="{{item.status}}"
+        startTime="{{item.startTime}}"
+        endTime="{{item.endTime}}" >
+    
+        <button class="cu-btn round theme-bg text-white shadow-blur" catchtap="">去门店</button>
+    </store-node>
+</view>

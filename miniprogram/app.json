@@ -1,6 +1,7 @@
 {
     "pages": [
-        "pages/index/index"
+        "pages/index/index",
+        "pages/test/test"
     ],
     "plugins": {
         "liteCupPlugin": {
@@ -10,7 +11,26 @@
     },
 
     "usingComponents": {
-        "dialog": "plugin://liteCupPlugin/dialog"
+        "dialog": "plugin://liteCupPlugin/dialog",
+        "dialog-cover": "plugin://liteCupPlugin/dialog-cover",
+        "notice": "plugin://liteCupPlugin/notice",
+
+        "nav-date": "plugin://liteCupPlugin/nav-date",
+
+        "bar": "plugin://liteCupPlugin/bar",
+        "bar-date": "plugin://liteCupPlugin/bar-date",
+        "tabbar": "plugin://liteCupPlugin/tabbar",
+
+        "order-mall": "plugin://liteCupPlugin/order-mall",
+        "order-number": "plugin://liteCupPlugin/order-number",
+        "order-customer": "plugin://liteCupPlugin/order-customer",
+        "order-detail": "plugin://liteCupPlugin/order-detail",
+
+        "coupon-node": "plugin://liteCupPlugin/coupon-node",
+        "card-image": "plugin://liteCupPlugin/card-image",
+        "common-swiper": "plugin://liteCupPlugin/swiper",
+
+        "store-node": "plugin://liteCupPlugin/store-node"
     },
 
     "sitemapLocation": "sitemap.json"

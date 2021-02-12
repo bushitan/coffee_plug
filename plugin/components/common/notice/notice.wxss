@@ -1,0 +1,13 @@
+/* components/swiper/swiper.wxss */
+
+.pg-radius-card{
+    overflow: hidden;    
+    border-top-left-radius:15rpx;
+    border-top-right-radius:15rpx;
+    z-index: 999;
+    position: absolute;
+    top:365rpx;
+    left: 0;
+    right:0;
+    height:15rpx; 
+}

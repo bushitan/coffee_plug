@@ -1,0 +1,16 @@
+
+<!-- 图片式卡片 -->
+<view class="cu-card article no-card" >
+    <view class="cu-item shadow padding-top">
+        <view class="content ">
+            <image src="{{image}}" mode="aspectFill"></image>
+            <view class="desc">
+                <view class="text-xl text-bold"> {{name}}</view>
+                <view class="text-df text-gray "> {{desc}}</view>
+                <view class="flex justify-between align-center">
+                    <slot/>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

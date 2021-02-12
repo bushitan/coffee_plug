@@ -1,0 +1,18 @@
+
+<!-- <view wx:for="{{orderMallList}}">
+    <order-mall node="{{item}}"></order-mall>
+</view> -->
+
+
+<!-- <view wx:for="{{orderNumberList}}">
+    <order-number node="{{item}}"></order-number>
+</view> -->
+
+
+
+<!-- <view class="padding-lr margin-top" wx:for="{{orderMallList}}">
+    <order-customer order="{{item}}"></order-customer>
+</view> -->
+
+
+<order-detail order="{{orderMallList[0]}}"></order-detail>

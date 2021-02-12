@@ -1,0 +1,7 @@
+
+
+<nav-date 
+    bindchoiseDate="choiseDate"
+    StatusBar="{{StatusBar}}"
+    CustomBar="{{CustomBar}}"
+></nav-date>

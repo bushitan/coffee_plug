@@ -1,8 +1,26 @@
 {
   "publicComponents": {
-    "coupon-list": "components/coupon/list/list",
+    "notice": "components/common/notice/notice",
+    "swiper": "components/common/swiper/swiper",
     "dialog": "components/common/dialog/dialog",
-    "dialog-cover": "components/common/dialog-cover/dialog-cover"
+    "dialog-cover": "components/common/dialog-cover/dialog-cover",
+
+    "nav-date":"components/nav/nav-date/nav-date",
+
+    "bar": "components/bar/bar/bar",
+    "bar-date": "components/bar/bar-date/bar-date",
+    "tabbar": "components/bar/tabbar/tabbar",
+
+    "card-image": "components/card/card-image/card-image",
+
+    "order-mall": "components/order/order-mall/order-mall",
+    "order-number": "components/order/order-number/order-number",
+    "order-customer":"components/order/order-customer/order-customer",
+    "order-detail":"components/order/order-detail/order-detail",
+
+    "coupon-node": "components/coupon/node/node",
+
+    "store-node": "components/store/node/node"
   },
   "pages": {
     "hello-page": "pages/hello-page"
