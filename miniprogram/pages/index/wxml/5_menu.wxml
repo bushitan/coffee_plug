@@ -1,0 +1,7 @@
+
+<!-- <form bindsubmit="submitStore"> -->
+
+<!-- <menu-phone list="{{menuList}}" cart="{{menuCart}}"  StatusBar="{{StatusBar}}"    CustomBar="{{CustomBar}}"></menu-phone> -->
+<menu-pad list="{{menuList}}" cart="{{menuCart}}" ></menu-pad>
+<!-- <menu-detail></menu-detail>
+<menu-cart></menu-cart> -->

@@ -4,6 +4,7 @@
 @import 'wxss/colorui/icon.wxss';
 @import '/wxss/theme.wxss';
 @import '/wxss/backdrop.wxss';
+@import '/wxss/pad_color.wxss';
 
 
 
@@ -49,3 +50,27 @@
     
 }
 
+
+.pg-mirror-vertical {
+    transform: rotateZ(180deg);   /* 垂直镜像翻转 */
+	transition-duration: 0.3s;
+}
+/* .pg-ellipsis-1{ 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+ }
+
+.pg-ellipsis-2{ 
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+ */

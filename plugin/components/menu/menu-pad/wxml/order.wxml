@@ -1,0 +1,13 @@
+
+<view class="flex justify-between align-center "   >
+    <view>
+        <text class="text-price text-red text-bold text-xl"></text>
+        <text class="text-red text-bold text-xxl margin-right-xs">{{item.price}}</text>
+        <text class="cu-tag line-red sm radius" wx:if="{{product.priceDiscount}}">{{product.priceDiscount}}</text>
+    </view>
+    <view style="position:relative" catchtap="toProductEditor" data-id="{{item.id}}">
+        <button class="cu-btn round theme-line lg" >{{btnText}}</button>
+        <view class="cu-tag badge" wx:if="{{cartObj[categoryindex+'_'+itemIndex]>0}}">
+    {{cartObj[categoryindex+'_'+itemIndex]}}</view>	   
+    </view>
+</view>

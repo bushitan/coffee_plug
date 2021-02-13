@@ -1,0 +1,16 @@
+
+<view  >
+    <view class="flex justify-between text-xl  text-center">
+        <view class="text-gray">库存</view>
+        <view class="">{{item.stock}}</view>
+    </view>
+    <view class="flex justify-between text-xl  text-center">
+        <view class="text-gray">单位</view>
+        <view>盒</view>
+    </view>
+
+    <view class="text-xl text-yellow ">
+        <input placeholder="输入盘点数量" name="{{item.id}}"
+        class="text-red text-bold" placeholder-class="text-yellow"></input>
+    </view>
+</view>

@@ -1,6 +1,6 @@
 <!--components/bar/bar.wxml-->
-
-<view class="cu-modal {{show?'show':''}} backdrop-sm {{config.theme}}">
+<!-- backdrop-sm -->
+<view class="cu-modal {{show?'show':''}}  {{config.theme}}">
     <view class="cu-dialog" >
         <view class="cu-bar bg-white justify-end">
             <view class="content">{{title}}</view>

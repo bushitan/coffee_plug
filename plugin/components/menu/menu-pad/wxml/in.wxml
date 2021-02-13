@@ -1,0 +1,14 @@
+
+<view >
+    <view class="flex justify-between text-xl  text-center">
+        <view class="text-gray">库存</view>
+        <view class="text-red">{{item.stock}}</view>
+    </view>
+    <view class="flex justify-between text-xl  text-center">
+        <view class="text-gray">单位</view>
+        <view>盒</view>
+    </view>
+    <view class="flex justify-center ">
+        <button class="cu-btn round theme-bg text-white" catchtap="toProductEditor" data-id="{{item.id}}" catchtap="toIn">入库</button>
+    </view>
+</view>

@@ -1,6 +1,6 @@
 <!--components/bar/bar.wxml-->
-
-<view class="cu-modal {{show?'show':''}} backdrop-sm ">
+<!-- backdrop-sm -->
+<view class="cu-modal {{show?'show':''}}  ">
     <view class="cover" >
         <image src="{{src}}" mode="widthFix" class="margin-bottom"></image>     
         <view class="flex justify-center">

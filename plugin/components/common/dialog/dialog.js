@@ -55,6 +55,7 @@ Component({
         },
 
         clickConfirm(){
+            this.hideModal
             this.triggerEvent('success', "abc")
         },
 

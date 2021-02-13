@@ -1,0 +1,53 @@
+
+<view class="VerticalBox">
+
+    <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}"    style="height:calc(100vh - 375rpx)" >
+    <!-- style=" height:calc(100vh - {{swiperHeight}} - {{ SpaceBottom }}px)"> -->
+        <view class="cu-item nowrap flex align-center {{index==TabCur?'text-yellow text-bold  bg-white cur flex align-center ':''}}" 
+        wx:for="{{list}}" wx:for-item="category" wx:for-index="index"   catchtap="tabSelect" data-id="{{index}}">
+            {{category.category.cate_name}}
+        </view>
+        <view class="pg-space-xxl"></view>
+        <!-- <view class="pg-space-xxl"></view>				 -->
+    </scroll-view>
+
+
+    <!-- <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - {{swiperHeight}} - {{ SpaceBottom }}px)" -->
+    <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 375rpx)" 
+        scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+        <view class="padding-top padding-lr" wx:for="{{list}}"  wx:key wx:for-item="category" wx:for-index='categoryindex' id="main-{{categoryindex}}">
+            <view class="cu-bar  bg-white">
+                <view class="action">
+                    <text class="cuIcon-title text-blue"></text>{{category.category.cate_name}}
+                </view>
+            </view>       
+            <view class="cu-list menu ">
+                <view class="cu-item "  wx:for="{{category.products}}" style="align-items: start;"
+                wx:for-item="item" wx:for-index="itemIndex" catchtap="openDetail" data-categoryindex="{{categoryindex}}" data-itemindex="{{itemIndex}}" >                    
+                    <view class="">
+                        <image src='{{item.imgs[0].src}}'
+                            class="cu-avatar radius xl  bg-gray margin-right-sm " 
+                            mode="aspectFill"
+                            ></image>
+                    </view>							
+                    <view class="action basis-xl padding-bottom" >
+                        <view class=" text-black text-bold text-df"> {{item.name}}</view>     
+                        <view class="text-gray text-xs margin-top-xs">今日销售（字段缺失）</view>	
+                        <view class="margin-top-xs flex justify-between align-center">
+                            <view class="text-red text-lg">
+                                <text class="text-price"></text>{{item.price}}
+                            </view>
+                            <view style="position:relative">
+                                <button class="cu-btn round line-yellow  sm" >选规格</button>
+                                <view class="cu-tag badge" wx:if="{{cartObj[categoryindex+'_'+itemIndex]>0}}">
+                                {{cartObj[categoryindex+'_'+itemIndex]}}</view>	                                
+                            </view>
+                        </view>
+                    </view>							
+                </view>
+            </view>				
+        </view>
+        
+        <view class="pg-space-xxl"></view>
+    </scroll-view>
+</view>

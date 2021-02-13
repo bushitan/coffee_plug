@@ -13,6 +13,12 @@
 
     "card-image": "components/card/card-image/card-image",
 
+    "menu-phone": "components/menu/menu-phone/menu-phone",
+    "menu-pad": "components/menu/menu-pad/menu-pad",
+    "menu-detail": "components/menu/menu-detail/menu-detail",
+    "menu-cart": "components/menu/menu-cart/menu-cart",
+
+
     "order-mall": "components/order/order-mall/order-mall",
     "order-number": "components/order/order-number/order-number",
     "order-customer":"components/order/order-customer/order-customer",

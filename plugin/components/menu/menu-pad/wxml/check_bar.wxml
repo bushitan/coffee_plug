@@ -1,0 +1,16 @@
+<view class="cu-bar bg-white padding-lr ">
+    <view>
+        <text class="cuIcon-titles theme-text 入库记录"></text>
+        <text>盘点</text>
+    </view>
+    <view>
+        <button class="cu-btn theme-line radius shadow-blur sm  margin-right" catchtap="checkLog">查看记录</button>
+        <button class="cu-btn theme-bg text-white  radius shadow-blur sm " form-type="submit">盘点上传</button>
+    </view>
+</view>
+<dialog show="{{confirmCheckDialog}}" title="请输入盘点备注"  textConfirm="确认上传" bindsuccess="checkDialogConfirm">
+    <view class="cu-form-group  text-left">
+        <view class="title">盘点备注：</view>
+        <input class="theme-color" placeholder="请输入备注" name="remark" value="" bindinput="checkInputNote"></input>
+    </view>
+</dialog>

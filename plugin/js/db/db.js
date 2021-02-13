@@ -71,7 +71,7 @@ class db {
      *      userToken   小杯子用户凭证
      */
     init(version, appId, userToken ){
-        console.log(this.map.hasOwnProperty(version))
+        // console.log(this.map.hasOwnProperty(version))
 
         if (this.map.hasOwnProperty(version) == false){
             console.error("没有找到该版本的DB" , version)

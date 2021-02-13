@@ -854,6 +854,12 @@ button.icon.lg {
 	padding: 0rpx 12rpx;
 	height: 32rpx;
 }
+.cu-tag.lg{
+	font-size: 30rpx;
+	padding: 0rpx 12rpx;
+	height: 64rpx;
+}
+
 
 .cu-capsule {
 	display: inline-flex;

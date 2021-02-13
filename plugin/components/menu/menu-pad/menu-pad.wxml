@@ -1,0 +1,63 @@
+<!--components/bar/bar.wxml-->
+
+ <!-- {{CustomBar}}px - {{Tabbar}}) -->
+<form bindsubmit="checkSubmit">
+
+    <view wx:if="{{type == 2}}">
+        <include src="wxml/check_bar.wxml"/>
+    </view>
+
+    <view class="{{isMirror?'pg-mirror-vertical':''}}">
+        <view class=" pad ">   
+            <scroll-view class="flex" scroll-y scroll-with-animation style="height:100vh" 
+            scroll-top="{{productScrollTop}}"  bindscroll="VerticalMain">
+
+                <view style="height:{{topSpace}}"></view>
+                <view class="padding" wx:for="{{list}}"   wx:for-item="category" wx:for-index='categoryindex' id="main-{{categoryindex}}">
+                    <view class="cuIcon-titles theme-text  text-xxl"> {{category.category.cate_name}}</view> 
+                        
+                    <view class="margin-top flex justify-start"  style=" flex-wrap:wrap;" >
+                        <view class="  padding-xs radius " style="flex-basis: 25%;"
+                        wx:for="{{category.products}}"  wx:for-item="item" wx:for-index="itemIndex" 
+                        catchtap="openDetail" data-categoryindex="{{categoryindex}}" data-itemindex="{{itemIndex}}">
+
+                            <view class=" shadow shadow-warp bg-white margin-top">
+                                <image src="{{item.imgs[0].src||'/images/un_image.png'}}" 
+                                mode="aspectFill" class="gif-black response block" style="height:150rpx"></image>            
+                                <view class="padding-sm ">            
+                                    <view class="text-xl name">{{item.name}}</view>
+                                        <view wx:if="{{type == 0}}">
+                                            <include src="wxml/order.wxml"/>
+                                        </view>
+                                        <view wx:if="{{type == 1}}">
+                                            <include src="wxml/in.wxml"/>
+                                        </view>
+                                        <view wx:if="{{type == 2}}">
+                                            <include src="wxml/check.wxml"/>
+                                        </view>
+                                </view>
+                            </view>                        
+                        </view>            
+                    </view>
+                </view>
+                
+                <view class="text-gray text-center text-xl  padding"  >到底了</view>
+                <view style="height:calc(100vh - 375rpx)"></view>
+                
+            </scroll-view>
+
+            <view class="tab-customer "  > 
+                <view class="flex justify-end   padding-xl"  >
+                    <button class=" cu-btn lg radius {{ TabCur == index ?'theme-bg text-white':'theme-line'}}  margin-left" 
+                        wx:for="{{list}}" wx:for-item="category" wx:for-index="index" wx:key  
+                        catchtap="tabSelect" data-id="{{index}}">{{category.category.cate_name}}</button>            
+                </view> 
+            </view>
+        </view>
+    </view>
+
+</form>
+
+
+            <!-- 菜单栏 wx:if="{{isMirror}}"   {{index==tabCur?'text-yellow cur text-xl text-bold':' text-gray text-df'}}-->
+            <!-- pg-mirror-vertical -->

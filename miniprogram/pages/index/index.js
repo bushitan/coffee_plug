@@ -1,6 +1,9 @@
 var  liteCupPlugin
 var app = getApp()
 var GP 
+
+var ProductData = require("../../data/product.js")
+var MenuCartData = require("../../data/menu-cart.js")
 Page({
     data: {
         items: [],
@@ -270,6 +273,11 @@ Page({
                 "PayTime": "2021-01-13 14:16:29"
             },
         ],
+
+
+        /**menu数据 */
+        menuList: ProductData,
+        menuCart: MenuCartData,
     },
 
     // 点击轮播图
@@ -282,7 +290,7 @@ Page({
     
     clickCoupon(e){
         var index = e.detail
-        console.log(index)
+        // console.log(index)
         // TODO 执行细则
         // wx.navigateTo({ url: this.data.couponList[index].page })
     },
@@ -292,13 +300,16 @@ Page({
     },
 
 
+    submitStore(e){
+        console.log(e.detail)
+    },
 
     onLoad() {
         GP = this 
         app.db.org.SearchOrgWxClientInfos().then(res => {
-            console.log(res)
+            // console.log(res)
         }).catch(res=>{
-            console.log(res)
+            // console.log(res)
         })
 
 
@@ -328,7 +339,7 @@ Page({
 
       
       var a = wx.getStorageSync('say')
-      console.log(a)
+    //   console.log(a)
 
     },
 
