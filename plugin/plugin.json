@@ -1,5 +1,6 @@
 {
   "publicComponents": {
+    "item": "components/common/item/item",
     "notice": "components/common/notice/notice",
     "swiper": "components/common/swiper/swiper",
     "dialog": "components/common/dialog/dialog",
@@ -7,9 +8,9 @@
 
     "nav-date":"components/nav/nav-date/nav-date",
 
-    "bar": "components/bar/bar/bar",
-    "bar-date": "components/bar/bar-date/bar-date",
-    "tabbar": "components/bar/tabbar/tabbar",
+    "tabbar-top": "components/tabbar/tabbar-top/tabbar-top",
+    "tabbar-date": "components/tabbar/tabbar-date/tabbar-date",
+    "tabbar": "components/tabbar/tabbar/tabbar",
 
     "card-image": "components/card/card-image/card-image",
 
@@ -18,6 +19,7 @@
     "menu-detail": "components/menu/menu-detail/menu-detail",
     "menu-sku": "components/menu/menu-sku/menu-sku",
     "menu-cart": "components/menu/menu-cart/menu-cart",
+    "menu-bar": "components/menu/menu-bar/menu-bar",
 
 
     "order-mall": "components/order/order-mall/order-mall",

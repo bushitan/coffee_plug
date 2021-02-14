@@ -1,8 +1,8 @@
 
 <!-- <form bindsubmit="submitStore"> -->
 
-<menu-phone list="{{menuList}}" order="{{menuCart}}"  StatusBar="{{StatusBar}}"    CustomBar="{{CustomBar}}"></menu-phone>
-<menu-pad list="{{menuList}}" order="{{menuCart}}" ></menu-pad>
+<!-- <menu-phone list="{{menuList}}" order="{{menuCart}}"  StatusBar="{{StatusBar}}"    CustomBar="{{CustomBar}}"></menu-phone>
+<menu-pad list="{{menuList}}" order="{{menuCart}}" ></menu-pad> -->
 
 <!-- dialog点单模式 -->
 <dialog show="{{showDialog}}" title="查询时间范围"  textConfirm="查询" bindsuccess="dialogConfirm" showTop="{{false}}" showBottom="{{false}}"> 
@@ -22,7 +22,17 @@
         <menu-sku  currentItem="{{CurrentItem}}" ></menu-sku>
     </view>    
 </view>    
+  
 
+<dialog show="{{!showDialog}}" title="购物车"  textConfirm="确定"  showCancel="{{false}}" showTop="{{!false}}" showBottom="{{!false}}"> 
 
+    <button  slot="top" class="cu-btn bg-red round " catchtap="clear">清空</button>
+    <menu-cart slot="content" order="{{menuCart}}"  show="{{!cartShow}}" ></menu-cart>
+</dialog>
 
-<menu-cart  order="{{menuCart}}"></menu-cart>
+<menu-bar order="{{menuCart}}" bind:pay="menuToPay"  bind:cart="menuOpenCart" >
+    <!-- <navigator class='cu-btn margin-right-sm radius ' open-type="navigateBack" >退出</navigator> -->
+    <!-- <button class='cu-btn margin-right-sm  sm' catchtap="entryOrderDialogOpen" >挂单</button>	
+    <button class='cu-btn margin-right-sm  sm' catchtap="switchMirror" >反转</button>	
+    <button class='cu-btn radius sm bg-red shadow-blur text-white shadow margin-right-sm' catchtap="toPay" disabled="{{check.isEmpty(order)}}">去结算</button>	 -->
+</menu-bar> 

@@ -14,7 +14,7 @@ Component({
      */
     properties: {
         order: { type: Object },
-        show: { type: Boolean, value: true }, //是否展示
+        show: { type: Boolean, value: false }, //是否展示
         // size: { type: String, value: "sm" }, 
         isMirror: { type: Boolean, value: false }, // 是否镜像
     }, 

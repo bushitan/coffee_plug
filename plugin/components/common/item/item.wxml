@@ -1,0 +1,14 @@
+
+<view class="flex justify-between align-center {{customClass}}" catchtap="click">
+    <view class="title text-cut">
+        <text class="cuIcon-{{icon}} {{iconColor}} margin-right-xs" wx:if="{{isIcon}}"></text>
+        <text class=" {{titleColor}}">{{title}}</text> 
+        <slot name="title"/>
+    </view>           
+    <view class=" flex  align-center">
+        <slot name="desc"/>
+        <text class=" {{descColor}}">{{desc}}</text>
+        <text class="cuIcon-right {{arrowColor}}" wx:if="{{isArrow}}"></text>
+    </view>
+</view>
+

@@ -14,11 +14,12 @@
         "dialog": "plugin://liteCupPlugin/dialog",
         "dialog-cover": "plugin://liteCupPlugin/dialog-cover",
         "notice": "plugin://liteCupPlugin/notice",
+        "item": "plugin://liteCupPlugin/item",
 
         "nav-date": "plugin://liteCupPlugin/nav-date",
 
-        "bar": "plugin://liteCupPlugin/bar",
-        "bar-date": "plugin://liteCupPlugin/bar-date",
+        "tabbar-top": "plugin://liteCupPlugin/tabbar-top",
+        "tabbar-date": "plugin://liteCupPlugin/tabbar-date",
         "tabbar": "plugin://liteCupPlugin/tabbar",
 
         "menu-phone": "plugin://liteCupPlugin/menu-phone",
@@ -26,12 +27,14 @@
         "menu-detail": "plugin://liteCupPlugin/menu-detail",
         "menu-sku": "plugin://liteCupPlugin/menu-sku",
         "menu-cart": "plugin://liteCupPlugin/menu-cart",
+        "menu-bar": "plugin://liteCupPlugin/menu-bar",
         
 
         "order-mall": "plugin://liteCupPlugin/order-mall",
         "order-number": "plugin://liteCupPlugin/order-number",
         "order-customer": "plugin://liteCupPlugin/order-customer",
         "order-detail": "plugin://liteCupPlugin/order-detail",
+
 
         "coupon-node": "plugin://liteCupPlugin/coupon-node",
         "card-image": "plugin://liteCupPlugin/card-image",

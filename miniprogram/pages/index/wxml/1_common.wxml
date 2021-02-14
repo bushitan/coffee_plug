@@ -1,10 +1,15 @@
    <!-- 基础组件 -->
 
 <!-- <dialog show="{{true}}"></dialog> -->
-    <common-swiper list="{{swiperList}}" isBottom="{{true}}" bindclick="clickSwiper" ></common-swiper>
+    <!-- <common-swiper list="{{swiperList}}" isBottom="{{true}}" bindclick="clickSwiper" ></common-swiper>
     
     <notice icon="commentfill" text="禁止换行111以禁止换行，超出容器部分会以禁止换行，超出容器部分会以" isShadow="{{!true}}" bindclick="clickNotice" ></notice>
 
     
     <dialog-cover show="{{true}}" src="https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg"></dialog-cover>
-   
+    -->
+
+<item  title="title" desc="desc" isIcon="{{true}}" isArrow="{{true}}" catchtap="clickItem" customClass="bg-white text-xl padding">
+    <view class="cu-tag" slot="title">拉拉阿拉</view>
+    <view class="cu-tag" slot="desc">哈哈哈</view>    
+</item>

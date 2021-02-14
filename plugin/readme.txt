@@ -11,9 +11,9 @@ components  插件目录
 ---- nav 普通自定义导航【含返回】×
 ---- nav-date 时间选择导航 √
 
--- bar 栏目
----- bar 普通选择栏目 √
----- bar-date 按时间分类选择栏目 √
+-- tabbar栏目
+---- tabbar-top 普通选择栏目 √
+---- tabbar-date 按时间分类选择栏目 √
 ---- tabbar 底部栏目分类选项 √
 
 -- card 卡片
@@ -24,8 +24,10 @@ components  插件目录
 -- menu 菜单
 ---- menu-phone 点单矩阵，菜单-产品列表【仅仅做展示数据，不含数量增减操作】√
 ---- menu-pad  pad的点单矩阵，菜单-产品列表【仅仅做展示数据，不含数量增减操作】√
----- menu-detail 产品详情页,含SKU 【仅仅做展示数据，不含SKU添加、取消操作】
+---- menu-detail 产品详情页, 【仅仅做展示数据】√
+---- menu-sku 产品SKU 【SKU添加、取消操作】√
 ---- menu-cart 购物车，已选产品 【加减数据按钮，返回inde，由页面操作】√
+---- menu-bar 菜单底部操作栏目【打开购物车，当前金额，去下单】√
 
 -- order 订单
 ---- order-detail 订单详情【仅仅展示数据，不含退款、扫码操作】√
@@ -40,7 +42,7 @@ components  插件目录
 -- store 门店
 ---- store-detail 订单详情【仅仅展示数据，拨打电话，导航，不含点击门店后的行为】 ×
 ---- store-node 门店的的原子节点【仅仅做数据展示】√
-
+---- store-map 门店地图【小杯子的地图】
 
 
 

@@ -5,7 +5,10 @@ var GP
 var ProductData = require("../../data/product.js")
 var MenuCartData = require("../../data/menu-cart.js")
 var CurrentItem = require("../../data/currentItem.js")
+var ClickBehaviors = require("js/click.js")
 Page({
+
+    behaviors: [ClickBehaviors],
     data: {
         items: [],
         currentItem: 0,

@@ -32,7 +32,7 @@ Component({
         showBottom: { type: Boolean, value: true },
 
         // 主动关闭按钮
-        showAutoClose: { type: Boolean, value: !false },
+        showAutoClose: { type: Boolean, value: false },
         autoCloseText: { type: String, value: "text-white" },
     },
     // behaviors: [app.behaviors.config],
@@ -62,7 +62,7 @@ Component({
         },
 
         clickConfirm(){
-            this.hideModal
+            this.hideModal()
             this.triggerEvent('success', "abc")
         },
 
