@@ -4,6 +4,7 @@ var GP
 
 var ProductData = require("../../data/product.js")
 var MenuCartData = require("../../data/menu-cart.js")
+var CurrentItem = require("../../data/currentItem.js")
 Page({
     data: {
         items: [],
@@ -278,6 +279,7 @@ Page({
         /**menu数据 */
         menuList: ProductData,
         menuCart: MenuCartData,
+        CurrentItem: CurrentItem,
     },
 
     // 点击轮播图

@@ -24,7 +24,9 @@
         "menu-phone": "plugin://liteCupPlugin/menu-phone",
         "menu-pad": "plugin://liteCupPlugin/menu-pad",
         "menu-detail": "plugin://liteCupPlugin/menu-detail",
+        "menu-sku": "plugin://liteCupPlugin/menu-sku",
         "menu-cart": "plugin://liteCupPlugin/menu-cart",
+        
 
         "order-mall": "plugin://liteCupPlugin/order-mall",
         "order-number": "plugin://liteCupPlugin/order-number",

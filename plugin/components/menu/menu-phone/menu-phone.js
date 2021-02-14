@@ -14,7 +14,7 @@ Component({
      */
     properties: {
         list: { type: Array },
-        cart: { type: Object },
+        order: { type: Object },
         StatusBar: {
             type: Number,
             value: 0
@@ -39,7 +39,7 @@ Component({
         MainCur: 0,
         VerticalNavTop: 100,
 
-        cartObj:{},
+        orderObj:{},
     },
 
     // 监听器
@@ -69,16 +69,16 @@ Component({
         },
 
         // 监测购物车数据，同步到已选数量
-        'cart': function (cart) {
+        'order': function (order) {
             var temp = {}
-            for(var key in cart){
+            for(var key in order){
                 var i = key.split("_")[0]
                 var j = key.split("_")[1]
                 var newKey = i + "_" + j
                 temp[newKey] = temp[newKey] || 0 //防止数量为0
-                temp[newKey] = temp[newKey] + cart[key].Quantity
+                temp[newKey] = temp[newKey] + order[key].Quantity
             }
-            this.setData({ cartObj: temp})
+            this.setData({ orderObj: temp})
         }
     },
     ready(){ 

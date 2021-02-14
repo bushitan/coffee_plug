@@ -13,8 +13,10 @@ Component({
      * 组件的属性列表
      */
     properties: {
-        node: { type: Object},
-       
+        order: { type: Object },
+        show: { type: Boolean, value: true }, //是否展示
+        // size: { type: String, value: "sm" }, 
+        isMirror: { type: Boolean, value: false }, // 是否镜像
     }, 
     options: { styleIsolation: 'apply-shared'},
     /**
@@ -30,9 +32,18 @@ Component({
      * 组件的方法列表
      */
     methods: {
-        
-        click(e){
-            this.triggerEvent('click', e.currentTarget.dataset.index)
+
+        /**
+         * @method 清空
+         */
+        clear(e) {
+            this.triggerEvent('clear')
+        },
+        /**
+         * @method 关闭
+         */
+        close(e) {
+            this.setData({show:false,})
         },
 
     }

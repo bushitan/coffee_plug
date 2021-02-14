@@ -27,9 +27,16 @@ Component({
             type: Boolean,
             value: false
         },
+
+        showTop: { type: Boolean, value: true },
+        showBottom: { type: Boolean, value: true },
+
+        // 主动关闭按钮
+        showAutoClose: { type: Boolean, value: !false },
+        autoCloseText: { type: String, value: "text-white" },
     },
     // behaviors: [app.behaviors.config],
-    options: { styleIsolation: 'apply-shared'},
+    options: { styleIsolation: 'apply-shared', multipleSlots: true },
     /**
      * 组件的初始数据
      */

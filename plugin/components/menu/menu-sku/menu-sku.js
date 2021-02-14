@@ -15,6 +15,7 @@ Component({
     properties: {
 
         currentItem: { type: Object },
+        order: { type: Object },
         show: { type: Boolean, value: true }, //是否展示
         // size: { type: String, value: "sm" }, 
         isMirror: { type: Boolean, value: false }, // 是否镜像
@@ -26,27 +27,8 @@ Component({
      */
     data: {
         // CustomBar:62
-        swiperList:[],
     },
-    // 监听器
-    observers: {
-        // 监听list， 生成产品菜单的高度信息
-        'currentItem': function (currentItem) {
-            
 
-            var swiperList = []
-            var imgs = currentItem.imgs
-            for(var i = 0 ; i<imgs.length;i++){
-                swiperList.push({
-                    id: i,
-                    type: 'image',
-                    url: currentItem.imgs[i].src
-                })
-            }
-            this.setData({ swiperList: swiperList})
-            
-        },
-    },
     ready(){
     },
     /**

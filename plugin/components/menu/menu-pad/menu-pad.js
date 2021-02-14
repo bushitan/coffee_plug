@@ -14,16 +14,15 @@ Component({
      */
     properties: {
         list: { type: Array },
-        cart: { type: Object },
-        type: { type: Number, value: 1 },  // 0点单  1入库 2盘点
+        order: { type: Object },
 
-
-        btnText: { type: String, value: "选择" }, 
-
-        topSpace: { type: String, value: "0" },
+        topSpace: { type: Number, value: "100rpx" },
         isCustom: { type: Boolean, value: false },
         isMirror: { type: Boolean, value: false },
 
+        type: { type: Number, value: 1 }, // 1订单   2入库  3盘点
+
+        btnText:{ type: String, value: "选规格" },
     }, 
     options: { styleIsolation: 'apply-shared'},
     /**
@@ -37,11 +36,7 @@ Component({
         TabCur: 0,
         MainCur: 0,
         VerticalNavTop: 100,
-        cartObj: {},
-
-        confirmCheckDialog:false,// 确认上传
-        confirmCheckData:{}, // 盘点数据
-        confirmCheckNote:"", //盘点备注
+        orderObj: {},
     },
     // 监听器
     observers: {
@@ -70,16 +65,16 @@ Component({
         },
 
         // 监测购物车数据，同步到已选数量
-        'cart': function (cart) {
+        'order': function (order) {
             var temp = {}
-            for (var key in cart) {
+            for (var key in order) {
                 var i = key.split("_")[0]
                 var j = key.split("_")[1]
                 var newKey = i + "_" + j
                 temp[newKey] = temp[newKey] || 0 //防止数量为0
-                temp[newKey] = temp[newKey] + cart[key].Quantity
+                temp[newKey] = temp[newKey] + order[key].Quantity
             }
-            this.setData({ cartObj: temp })
+            this.setData({ orderObj: temp })
             console.log(temp)
         }
     },
@@ -90,57 +85,8 @@ Component({
      */
     methods: {
 
-        /*******盘点功能********/
-        /**
-         * @method 入库
-         */
-        toIn(e){
-            console.log(e.currentTarget.dataset.id)
-            this.triggerEvent('toIn', )
-        },
-        
-        /**
-         * @method 查看盘点记录
-         */
-        checkLog(){
-            this.triggerEvent('toLog', )
-        },
-
-        /**
-         * @method 盘点按钮
-         */
-        checkSubmit(e) {
-            console.log(e.detail)
-            this.setData({
-                confirmCheckData: e.detail.value,
-                confirmCheckDialog: true,
-            })
-        },
-        /**
-         * @method 盘点备注输入
-         */
-        checkInputNote(e){
-            console.log(e.detail.value)
-            this.setData({ confirmCheckNote: e.detail.value})
-        },
-        checkDialogConfirm(){
-            console.log("dialogConfirm", this.data.confirmCheckData, this.data.confirmCheckNote )
-
-        },
-
-
-
-        /*******订单功能********/
-        /**
-         * @method 订单和入库进行选择
-         */
         openDetail(e) {
-            // console.log(e.currentTarget.dataset.categoryindex)
-            // console.log(e.currentTarget.dataset.itemindex)
-            this.triggerEvent('click', {
-                i: e.currentTarget.dataset.categoryindex,
-                j: e.currentTarget.dataset.itemindex,
-            })
+            console.log(e.currentTarget.dataset.categoryindex, e.currentTarget.dataset.itemIndex)
         },
         /**
          * @method 点击左边，让右边滚动

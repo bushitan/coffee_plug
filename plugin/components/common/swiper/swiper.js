@@ -68,7 +68,9 @@ Component({
         bottomColor:{
             type:String,
             value:"#ffffff"
-        }
+        },
+
+        height: { type: String, value: "680rpx" }
     },
     // behaviors: [app.behaviors.config],
     options: { styleIsolation: 'apply-shared'},

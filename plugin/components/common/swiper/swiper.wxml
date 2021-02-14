@@ -1,7 +1,8 @@
 <!--components/bar/bar.wxml-->
 
 
-    <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+    <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500"
+    style="height:{{height}}">
         <swiper-item wx:for="{{list}}" wx:key  catchtap="clickItem" data-index="{{index}}">
             <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
             <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>

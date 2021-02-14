@@ -3,7 +3,7 @@
  <!-- {{CustomBar}}px - {{Tabbar}}) -->
 <form bindsubmit="checkSubmit">
 
-    <view wx:if="{{type == 2}}">
+    <view wx:if="{{type == 3}}">
         <include src="wxml/check_bar.wxml"/>
     </view>
 
@@ -26,13 +26,13 @@
                                 mode="aspectFill" class="gif-black response block" style="height:150rpx"></image>            
                                 <view class="padding-sm ">            
                                     <view class="text-xl name">{{item.name}}</view>
-                                        <view wx:if="{{type == 0}}">
+                                        <view wx:if="{{type == 1}}">
                                             <include src="wxml/order.wxml"/>
                                         </view>
-                                        <view wx:if="{{type == 1}}">
+                                        <view wx:if="{{type == 2}}">
                                             <include src="wxml/in.wxml"/>
                                         </view>
-                                        <view wx:if="{{type == 2}}">
+                                        <view wx:if="{{type == 3}}">
                                             <include src="wxml/check.wxml"/>
                                         </view>
                                 </view>

@@ -19,25 +19,31 @@
     </view>
 </view>
 
-<dialog show="{{showDialog}}" title="查询时间范围"  textConfirm="查询" bindsuccess="dialogConfirm">
 
-    <form bindsubmit="getQuery" class="">
-        <picker mode="date" value="{{starttoday}}" name="startDate" bindchange="startDateEvent" >
-        <view class="cu-bar bg-white search  padding-lr text-sm">
-            <view>开始日期</view>          
-                <text class="">
-                    <text>{{starttoday}}</text><text class="cuIcon-unfold "></text>
-                </text>
-        </view>
-            </picker>
-        
-        <picker mode="date"  value="{{endtoday}}" name="endDate"  bindchange="endDateEvent" >
+<dialog show="{{showDialog}}" title="查询时间范围"  textConfirm="查询" bindsuccess="dialogConfirm" >
+
+    <!-- <button class="cu-btn bg-red round " catchtap="clear" slot="top">清空</button> -->
+
+    <view slot="content">
+        <form bindsubmit="getQuery" class="" >
+            <picker mode="date" value="{{starttoday}}" name="startDate" bindchange="startDateEvent" >
             <view class="cu-bar bg-white search  padding-lr text-sm">
-                <view>结束日期</view>           
-                <text class="">
-                    <text>{{endtoday}}</text><text class="cuIcon-unfold "></text>
-                </text>
+                <view>开始日期</view>          
+                    <text class="">
+                        <text>{{starttoday}}</text><text class="cuIcon-unfold "></text>
+                    </text>
             </view>
-        </picker>   
-    </form>    
+                </picker>
+            
+            <picker mode="date"  value="{{endtoday}}" name="endDate"  bindchange="endDateEvent" >
+                <view class="cu-bar bg-white search  padding-lr text-sm">
+                    <view>结束日期</view>           
+                    <text class="">
+                        <text>{{endtoday}}</text><text class="cuIcon-unfold "></text>
+                    </text>
+                </view>
+            </picker>   
+        </form>    
+    </view>
+    
 </dialog>

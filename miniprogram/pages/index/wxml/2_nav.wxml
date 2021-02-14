@@ -4,4 +4,5 @@
     bindchoiseDate="choiseDate"
     StatusBar="{{StatusBar}}"
     CustomBar="{{CustomBar}}"
-></nav-date>
+>
+</nav-date>

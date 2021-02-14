@@ -1,19 +1,31 @@
 <!--components/bar/bar.wxml-->
 <!-- backdrop-sm -->
-<view class="cu-modal {{show?'show':''}}  {{config.theme}}">
-    <view class="cu-dialog" >
-        <view class="cu-bar bg-white justify-end">
-            <view class="content">{{title}}</view>
-                <view class="action" bindtap="hideModal">
-                    <text class="cuIcon-close text-red"></text>
-                </view>
-            </view>            
-            <slot></slot>
-            <view class="cu-bar bg-white justify-end">
+ <!-- style="position: absolute;top:120rpx;bottom:120rpx;left: 0;right: 0;" -->
+<view class="cu-modal {{show?'show':''}}  {{config.theme}} padding-tb">
+    <view class="cu-dialog " style="position: relative;">
+        <view class="cu-bar bg-white justify-between" wx:if="{{showTop}}">   
+            
+            <view class="action" >
+                <slot name="top"></slot>
+            </view>         
+            <view class="content" >{{title}}</view>
+            <view class="action" bindtap="hideModal">
+                <text class="cuIcon-close text-red " style="font-size:36rpx;"></text>
+            </view>
+        </view>           
+
+        <slot name="content"></slot>
+
+        <view class="cu-bar bg-white justify-end" wx:if="{{showBottom}}">
             <view class="action">
                 <button class="cu-btn theme-line " bindtap="hideModal" wx:if="{{showCancel}}">{{textCancel}}</button>
                 <button class="cu-btn theme-bg text-white margin-left" bindtap="clickConfirm">{{textConfirm}}</button>
             </view>
+        </view>
+
+         <view class="flex justify-center close"  wx:if="{{showAutoClose}}" bindtap="hideModal">
+            <!-- <text class="cuIcon-roundclose {{autoCloseText}} text-sl " style="font-size:60rpx" bindtap="hideModal"></text> -->
+                <text class="cuIcon-close text-red "  style="font-size:36rpx;"></text>
         </view>
     </view>
 </view>

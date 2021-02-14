@@ -39,8 +39,8 @@
                             </view>
                             <view style="position:relative">
                                 <button class="cu-btn round line-yellow  sm" >选规格</button>
-                                <view class="cu-tag badge" wx:if="{{cartObj[categoryindex+'_'+itemIndex]>0}}">
-                                {{cartObj[categoryindex+'_'+itemIndex]}}</view>	                                
+                                <view class="cu-tag badge" wx:if="{{orderObj[categoryindex+'_'+itemIndex]>0}}">
+                                {{orderObj[categoryindex+'_'+itemIndex]}}</view>	                                
                             </view>
                         </view>
                     </view>							

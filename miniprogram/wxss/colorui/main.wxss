@@ -27,7 +27,7 @@ page {
 	--purple: #6739b6;
 	--mauve: #9c26b0;
 	--pink: #e03997;
-	--brown: #a5673f;
+	--brown: #a5673f;shadow
 	--grey: #8799a3;
 	--black: #333333;
 	--darkGray: #666666;
@@ -2501,7 +2501,9 @@ button.icon.lg {
 	margin-right: auto;
 	width: 680rpx;
 	max-width: 100%;
-	background-color: #f8f8f8;
+	/* background-color: #f8f8f8; */
+    
+    background: rgba(255,255,255, 0.9);
 	border-radius: 10rpx;
 	overflow: hidden;
 }

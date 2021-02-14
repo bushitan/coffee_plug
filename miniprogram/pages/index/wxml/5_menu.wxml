@@ -1,7 +1,28 @@
 
 <!-- <form bindsubmit="submitStore"> -->
 
-<!-- <menu-phone list="{{menuList}}" cart="{{menuCart}}"  StatusBar="{{StatusBar}}"    CustomBar="{{CustomBar}}"></menu-phone> -->
-<menu-pad list="{{menuList}}" cart="{{menuCart}}" ></menu-pad>
-<!-- <menu-detail></menu-detail>
-<menu-cart></menu-cart> -->
+<menu-phone list="{{menuList}}" order="{{menuCart}}"  StatusBar="{{StatusBar}}"    CustomBar="{{CustomBar}}"></menu-phone>
+<menu-pad list="{{menuList}}" order="{{menuCart}}" ></menu-pad>
+
+<!-- dialog点单模式 -->
+<dialog show="{{showDialog}}" title="查询时间范围"  textConfirm="查询" bindsuccess="dialogConfirm" showTop="{{false}}" showBottom="{{false}}"> 
+   <view slot="content" class="bg-white "  style="position:relative">
+        <menu-detail currentItem="{{CurrentItem}}"  height="80vh" ></menu-detail>
+            
+        <!-- <view class="bg-white" style="position: absolute ;bottom: 0; left: 0;right: 0; ">  -->
+            <menu-sku  currentItem="{{CurrentItem}}" ></menu-sku>
+        <!-- </view>     -->
+    </view>
+</dialog>
+
+<!-- 全屏模式 -->
+<view  class="bg-white "  wx:if="{{false}}" >
+    <menu-detail currentItem="{{CurrentItem}}"  height="80vh" ></menu-detail>            
+    <view class="bg-white" style="position: absolute ;bottom: 0; left: 0;right: 0; "> 
+        <menu-sku  currentItem="{{CurrentItem}}" ></menu-sku>
+    </view>    
+</view>    
+
+
+
+<menu-cart  order="{{menuCart}}"></menu-cart>

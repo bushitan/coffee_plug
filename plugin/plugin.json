@@ -16,6 +16,7 @@
     "menu-phone": "components/menu/menu-phone/menu-phone",
     "menu-pad": "components/menu/menu-pad/menu-pad",
     "menu-detail": "components/menu/menu-detail/menu-detail",
+    "menu-sku": "components/menu/menu-sku/menu-sku",
     "menu-cart": "components/menu/menu-cart/menu-cart",
 
 

@@ -6,6 +6,5 @@
         <view class="flex justify-center">
             <text class="cuIcon-roundclose  text-white text-sl margin-top" style="font-size:60rpx" bindtap="hideModal"></text>
         </view>
-        
     </view>
 </view>
