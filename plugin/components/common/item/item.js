@@ -2,10 +2,10 @@
  *  完整样例
    
 
-<item  title="title" desc="desc" isIcon="{{true}}" isArrow="{{true}}" catchtap="clickItem" customClass="bg-white text-xl padding">
-    <view class="cu-tag" slot="title">拉拉阿拉</view>
-    <view class="cu-tag" slot="desc">哈哈哈</view>
-</item>
+    <item  title="title" desc="desc" isIcon="{{true}}" isArrow="{{true}}" catchtap="clickItem" customClass="bg-white text-xl padding">
+        <view class="cu-tag" slot="title">拉拉阿拉</view>
+        <view class="cu-tag" slot="desc">哈哈哈</view>
+    </item>
 
  */
 Component({

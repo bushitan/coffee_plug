@@ -28,7 +28,11 @@
         "menu-sku": "plugin://liteCupPlugin/menu-sku",
         "menu-cart": "plugin://liteCupPlugin/menu-cart",
         "menu-bar": "plugin://liteCupPlugin/menu-bar",
-        
+
+        "product-detail": "plugin://liteCupPlugin/product-detail",
+        "product-sku": "plugin://liteCupPlugin/product-sku",
+        "product-cart": "plugin://liteCupPlugin/product-cart",
+        "product-bar": "plugin://liteCupPlugin/product-bar",
 
         "order-mall": "plugin://liteCupPlugin/order-mall",
         "order-number": "plugin://liteCupPlugin/order-number",

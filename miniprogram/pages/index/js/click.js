@@ -7,6 +7,10 @@ module.exports = Behavior({
 
     //准备完成
     ready() { 
+        wx.navigateTo({
+            url: 'plugin://liteCupPlugin/temp',
+            // url : "plugin://liteCupPlugin/hello-page"
+        })
     },
     methods: {
         menuToPay() { console.log("to Pay") },

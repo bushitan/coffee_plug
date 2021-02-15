@@ -1,0 +1,130 @@
+<!-- showTop="{{false}}" -->
+
+<common-swiper list="{{swiperList}}"  bindclick="clickSwiper" ></common-swiper>
+<view class="padding-lr margin-top">
+    <view class="flex flex-start" wx:if="{{currentItem.tags.length>0}}">
+        <text class="cu-tag  radius  text-sm margin-right-sm padding-xs"
+            wx:for="{{currentItem.tags}}"  wx:key="*this"  wx:for-item="tag" wx:for-index="tagIndex">{{tag}}</text>	
+    </view>
+    <view class="radius text-sm text-left margin-top-sm"  wx:if="{{currentItem.shortDescription}}">{{currentItem.shortDescription || ""}}</view>			
+</view>
+
+<!-- <view class="pg-space-xxl"></view>
+<view class="pg-space-xxl"></view> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 详情选项 -->
+<!-- <view class="cu-modal backdrop-sm  {{show?'show':''}} " >-->
+    <!-- <view class="menu-dialog {{isMirror?'pg-mirror-vertical':''}}" style="position: absolute;top:120rpx;bottom:120rpx;left: 0;right: 0;">  -->
+    
+        <!-- <scroll-view class="" scroll-y scroll-with-animation style="width: 100%;height: calc(100vh - 50px - 100px - 30px - {{CustomBar}}px);" >  -->
+<!-- <dialog show="{{!showDialog}}" title="查询时间范围"  textConfirm="查询" bindsuccess="dialogConfirm" showTop="{{false}}" showBottom="{{false}}">  -->
+    <!-- <view  style="position:relative"> -->
+        <!-- <scroll-view class="" scroll-y scroll-with-animation style="width: 100%;height:{{height}};" >  -->
+            <!-- <image src='{{currentItem.imgs[0].src}}' class="block " style="width:100%; height:150px" mode="widthFix"></image> -->
+            
+     
+
+         
+            <!-- <view class="pg-space-xxl"></view>
+            <view class="pg-space-xxl"></view>
+            <view class="pg-space-xxl"></view> -->
+        <!-- </scroll-view> -->
+        
+      
+    <!-- </view>  -->
+<!-- </dialog> -->
+       
+    <!-- </view> -->
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--     
+    <view class=" text-center" style="position: absolute;{{ isMirror?'top:50rpx':'bottom:50rpx'}}; left: 0;right: 0;" >          
+        <button class="cu-btn  text-bold radius {{ isMirror?'pg-mirror-vertical':''}}" catchtap="closeShow">继续选择</button>
+    </view>
+
+    
+    <view class=" text-center flex justify-between align-center padding" style="position: absolute;bottom: 0rpx; left: 0;right: 0;" wx:if="{{isMirror}}">          
+        <view class="flex flex-start">
+            <view class="padding-lr margin-top " wx:for="{{currentItem.attributes}}"  wx:key="*this" wx:for-item="att"  wx:for-index="attIndex">
+                <view class=" text-left margin-top-sm text-gray text-sm">{{att.productAttributeName}}</view>
+                <view class="flex flex-start flex-wrap margin-top-sm">	
+                    <view class="text-sm text-center margin-right-sm margin-bottom-sm" wx:for="{{ att.attributeValues }}" wx:key="*this"  wx:for-item="value" wx:for-index="valueIndex">
+                        <button class="cu-btn radius {{att.attributeValues[valueIndex].isSelect?'bg-yellow text-white' :'line-gray'}}"                     
+                        catchtap="clickAtt"
+                        data-attindex="{{attIndex}}"
+                        data-valueindex="{{valueIndex}}"
+                        >{{value.name}}
+                        </button>		
+                    </view>
+                </view>
+            </view>
+        </view>
+
+            
+        <view class="flex justify-between align-center text-xxl">	
+            <view>
+                <button class="cu-btn  lg margin-right" catchtap="closeShow">继续选择</button>	
+            </view>				
+            <view class=" margin-right">
+                <text class="text-price text-xxl text-bold text-white"></text>
+                <text class="text-xxl text-bold text-white">{{ currentItem.price}}</text>
+            </view>				
+            <view class="flex justify-between align-center">                        
+                <text class="cuIcon-roundleftfill-copy theme-text text-sl" catchtap="cutItem" 	hidden="{{order[key]? false : true}}"></text>
+                <text class="padding-lr-sm text-white">{{ order[key].Quantity || 0 }}</text>	
+                <text class="cuIcon-roundrightfill theme-text text-sl"  catchtap="addItem"></text>
+            </view>	                                
+        </view>
+    </view> -->
+
+
+
+<!-- </view> -->
+
+
+
+

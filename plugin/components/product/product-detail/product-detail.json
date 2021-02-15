@@ -1,0 +1,7 @@
+{
+    "component": true,
+    "usingComponents": {
+        "dialog": "../../common/dialog/dialog",
+        "common-swiper": "../../common/swiper/swiper"
+    }
+}

@@ -1,21 +1,31 @@
 
 <!-- <form bindsubmit="submitStore"> -->
 
-<!-- <menu-phone list="{{menuList}}" order="{{menuCart}}"  StatusBar="{{StatusBar}}"    CustomBar="{{CustomBar}}"></menu-phone>
-<menu-pad list="{{menuList}}" order="{{menuCart}}" ></menu-pad> -->
+<menu-phone list="{{menuList}}" order="{{menuCart}}"  StatusBar="{{StatusBar}}"    CustomBar="{{CustomBar}}"></menu-phone>
+<menu-pad list="{{menuList}}" order="{{menuCart}}" ></menu-pad>
+
+
+<!-- <menu-bar order="{{menuCart}}" bind:pay="menuToPay"  bind:cart="menuOpenCart" > -->
+    <!-- <navigator class='cu-btn margin-right-sm radius ' open-type="navigateBack" >退出</navigator> -->
+    <!-- <button class='cu-btn margin-right-sm  sm' catchtap="entryOrderDialogOpen" >挂单</button>	
+    <button class='cu-btn margin-right-sm  sm' catchtap="switchMirror" >反转</button>	
+    <button class='cu-btn radius sm bg-red shadow-blur text-white shadow margin-right-sm' catchtap="toPay" disabled="{{check.isEmpty(order)}}">去结算</button>	 -->
+<!-- </menu-bar>  -->
+
+
+
+
+
+
 
 <!-- dialog点单模式 -->
-<dialog show="{{showDialog}}" title="查询时间范围"  textConfirm="查询" bindsuccess="dialogConfirm" showTop="{{false}}" showBottom="{{false}}"> 
+<!-- <dialog show="{{showDialog}}" title="查询时间范围"  textConfirm="查询" bindsuccess="dialogConfirm" showTop="{{false}}" showBottom="{{false}}"> 
    <view slot="content" class="bg-white "  style="position:relative">
         <menu-detail currentItem="{{CurrentItem}}"  height="80vh" ></menu-detail>
-            
-        <!-- <view class="bg-white" style="position: absolute ;bottom: 0; left: 0;right: 0; ">  -->
             <menu-sku  currentItem="{{CurrentItem}}" ></menu-sku>
-        <!-- </view>     -->
     </view>
 </dialog>
 
-<!-- 全屏模式 -->
 <view  class="bg-white "  wx:if="{{false}}" >
     <menu-detail currentItem="{{CurrentItem}}"  height="80vh" ></menu-detail>            
     <view class="bg-white" style="position: absolute ;bottom: 0; left: 0;right: 0; "> 
@@ -28,11 +38,4 @@
 
     <button  slot="top" class="cu-btn bg-red round " catchtap="clear">清空</button>
     <menu-cart slot="content" order="{{menuCart}}"  show="{{!cartShow}}" ></menu-cart>
-</dialog>
-
-<menu-bar order="{{menuCart}}" bind:pay="menuToPay"  bind:cart="menuOpenCart" >
-    <!-- <navigator class='cu-btn margin-right-sm radius ' open-type="navigateBack" >退出</navigator> -->
-    <!-- <button class='cu-btn margin-right-sm  sm' catchtap="entryOrderDialogOpen" >挂单</button>	
-    <button class='cu-btn margin-right-sm  sm' catchtap="switchMirror" >反转</button>	
-    <button class='cu-btn radius sm bg-red shadow-blur text-white shadow margin-right-sm' catchtap="toPay" disabled="{{check.isEmpty(order)}}">去结算</button>	 -->
-</menu-bar> 
+</dialog> -->

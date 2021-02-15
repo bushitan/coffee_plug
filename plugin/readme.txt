@@ -24,10 +24,12 @@ components  插件目录
 -- menu 菜单
 ---- menu-phone 点单矩阵，菜单-产品列表【仅仅做展示数据，不含数量增减操作】√
 ---- menu-pad  pad的点单矩阵，菜单-产品列表【仅仅做展示数据，不含数量增减操作】√
----- menu-detail 产品详情页, 【仅仅做展示数据】√
----- menu-sku 产品SKU 【SKU添加、取消操作】√
----- menu-cart 购物车，已选产品 【加减数据按钮，返回inde，由页面操作】√
----- menu-bar 菜单底部操作栏目【打开购物车，当前金额，去下单】√
+
+-- product 产品
+---- product-detail 产品详情页, 【仅仅做展示数据】√
+---- product-sku 产品SKU 【SKU添加、取消操作】√
+---- product-cart 购物车，已选产品 【加减数据按钮，返回inde，由页面操作】√
+---- product-bar 菜单底部操作栏目【打开购物车，当前金额，去下单】√
 
 -- order 订单
 ---- order-detail 订单详情【仅仅展示数据，不含退款、扫码操作】√
@@ -44,6 +46,16 @@ components  插件目录
 ---- store-node 门店的的原子节点【仅仅做数据展示】√
 ---- store-map 门店地图【小杯子的地图】
 
+
+pages  组件目录
+-- product 产品相关
+---- menu 自助点单，自助点单页面
+---- detail 自助点单，自助点单页面
+
+-- order 订单
+---- orderList 订单列表
+---- orderDetail 订单详情
+---- refundDetail 售后订单详情
 
 
 

@@ -5,14 +5,15 @@
 
  
 
-    <include src="wxml/1_common.wxml" />
+    <!-- <include src="wxml/1_common.wxml" /> -->
     <!-- <include src="wxml/2_nav.wxml" /> -->
     <!-- <include src="wxml/3_bar.wxml" /> -->
     <!-- <include src="wxml/4_card.wxml" /> -->
-    <!-- <include src="wxml/5_menu.wxml" /> -->
-    <!-- <include src="wxml/6_order.wxml" /> -->
-    <!-- <include src="wxml/7_coupon.wxml" /> -->
-    <!-- <include src="wxml/8_store.wxml" /> -->
+    <include src="wxml/5_menu.wxml" />
+    <!-- <include src="wxml/6_product.wxml" /> -->
+    <!-- <include src="wxml/7_order.wxml" /> -->
+    <!-- <include src="wxml/8_coupon.wxml" /> -->
+    <!-- <include src="wxml/9_store.wxml" /> -->
 
 </view>
 

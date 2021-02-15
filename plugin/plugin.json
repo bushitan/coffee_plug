@@ -20,7 +20,11 @@
     "menu-sku": "components/menu/menu-sku/menu-sku",
     "menu-cart": "components/menu/menu-cart/menu-cart",
     "menu-bar": "components/menu/menu-bar/menu-bar",
-
+        
+    "product-detail": "components/product/product-detail/product-detail",
+    "product-sku": "components/product/product-sku/product-sku",
+    "product-cart": "components/product/product-cart/product-cart",
+    "product-bar": "components/product/product-bar/product-bar",
 
     "order-mall": "components/order/order-mall/order-mall",
     "order-number": "components/order/order-number/order-number",
@@ -32,7 +36,8 @@
     "store-node": "components/store/node/node"
   },
   "pages": {
-    "hello-page": "pages/hello-page"
+    "temp": "pages/product/temp/temp",
+    "hello-page": "pages/hello-page/hello-page"
   },
   "main": "js/route.js"
 }
