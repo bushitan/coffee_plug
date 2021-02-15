@@ -1,0 +1,52 @@
+<!--pages/test/test.wxml-->
+
+<nav-custom bgColor="" isBack="{{true}}">
+    <view slot="backText" class="text-white">返回</view>
+    <!-- <view slot="content">卡片</view> -->
+</nav-custom>
+
+<view class="theme-yellow">
+
+    <common-swiper list="{{swiperList}}" isBottom="{{!true}}" bindclick="clickSwiper" height="200rpx" ></common-swiper>
+
+
+
+    <menu-phone list="{{ProductData}}" order="{{productCart}}"  height="calc(100vh - 200rpx)"></menu-phone>
+
+    <dialog show="{{!true}}" title="查询时间范围"  textConfirm="查询" bindsuccess="dialogConfirm" showTop="{{false}}" showBottom="{{false}}"> 
+    <view slot="content" class="bg-white "  style="position:relative">
+            <product-detail currentItem="{{CurrentItem}}"  height="80vh" ></product-detail>
+            <product-sku  currentItem="{{CurrentItem}}" ></product-sku>
+        </view>
+    </dialog>
+
+    <dialog show="{{!true}}" title="购物车"  textConfirm="确定"  showCancel="{{false}}" showTop="{{!false}}" showBottom="{{!false}}"> 
+        <button  slot="top" class="cu-btn bg-red round " catchtap="clear">清空</button>
+        <product-cart slot="content" order="{{MenuCartData}}"  show="{{!cartShow}}" ></product-cart>
+    </dialog>
+
+    <product-bar order="{{MenuCartData}}" bind:pay="menuToPay"  bind:cart="menuOpenCart" >
+        <navigator class='cu-btn margin-right-sm round shadow-blur text-gray ' catchtap="menuOpenCart" >购物车</navigator>
+    </product-bar> 
+
+
+
+</view>
+
+            
+<!-- 全屏模式 -->
+<!-- <view  class="bg-white "  wx:if="{{showDetail}}" >
+    <product-detail currentItem="{{CurrentItem}}"  height="80vh" ></product-detail>            
+    <view class="bg-white" style="position: absolute ;bottom: 0; left: 0;right: 0; "> 
+        <product-sku  currentItem="{{CurrentItem}}" ></product-sku>
+    </view>    
+</view>     -->
+  
+        <!-- <view class="bg-white" style="position: absolute ;bottom: 0; left: 0;right: 0; ">  -->
+
+        <!-- </view>     -->
+
+    <!-- <navigator class='cu-btn margin-right-sm radius ' open-type="navigateBack" >退出</navigator> -->
+    <!-- <button class='cu-btn margin-right-sm  sm' catchtap="entryOrderDialogOpen" >挂单</button>	
+    <button class='cu-btn margin-right-sm  sm' catchtap="switchMirror" >反转</button>	
+    <button class='cu-btn radius sm bg-red shadow-blur text-white shadow margin-right-sm' catchtap="toPay" disabled="{{check.isEmpty(order)}}">去结算</button>	 -->

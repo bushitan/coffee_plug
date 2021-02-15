@@ -9,13 +9,16 @@
             "provider": "wxd19bbe9cb3b293b6"
         }
     },
-
+    "window": {
+        "navigationStyle": "custom"
+    },
     "usingComponents": {
         "dialog": "plugin://liteCupPlugin/dialog",
         "dialog-cover": "plugin://liteCupPlugin/dialog-cover",
         "notice": "plugin://liteCupPlugin/notice",
         "item": "plugin://liteCupPlugin/item",
-
+    
+        "nav-custom": "plugin://liteCupPlugin/nav-custom",
         "nav-date": "plugin://liteCupPlugin/nav-date",
 
         "tabbar-top": "plugin://liteCupPlugin/tabbar-top",
@@ -23,11 +26,7 @@
         "tabbar": "plugin://liteCupPlugin/tabbar",
 
         "menu-phone": "plugin://liteCupPlugin/menu-phone",
-        "menu-pad": "plugin://liteCupPlugin/menu-pad",
-        "menu-detail": "plugin://liteCupPlugin/menu-detail",
-        "menu-sku": "plugin://liteCupPlugin/menu-sku",
-        "menu-cart": "plugin://liteCupPlugin/menu-cart",
-        "menu-bar": "plugin://liteCupPlugin/menu-bar",
+        "menu-pad": "plugin://liteCupPlugin/menu-pad", 
 
         "product-detail": "plugin://liteCupPlugin/product-detail",
         "product-sku": "plugin://liteCupPlugin/product-sku",

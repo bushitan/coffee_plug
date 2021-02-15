@@ -3,7 +3,7 @@
 
 /**
  *  完整样例
- *  <common-swiper list="{{swiperList}}" isBottom="{{true}}" bottomColor="#ffffff" bindclick="clickSwiper" ></common-swiper>
+ *  <common-swiper list="{{swiperList}}" isBottom="{{true}}" bottomColor="#ffffff" bindclick="clickSwiper" height="375rpx" ></common-swiper>
     
     点击事件样例
     clickSwiper(e){
@@ -70,7 +70,7 @@ Component({
             value:"#ffffff"
         },
 
-        height: { type: String, value: "680rpx" }
+        height: { type: String, value: "375rpx" }
     },
     // behaviors: [app.behaviors.config],
     options: { styleIsolation: 'apply-shared'},

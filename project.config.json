@@ -54,7 +54,14 @@
 		},
 		"plugin": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": 0,
+					"name": "plugin-private://wxd19bbe9cb3b293b6/pages/product/productMenu/productMenu",
+					"pathName": "__plugin__/wxd19bbe9cb3b293b6/pages/product/productMenu/productMenu",
+					"scene": null
+				}
+			]
 		},
 		"game": {
 			"list": []

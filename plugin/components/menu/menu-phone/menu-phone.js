@@ -23,7 +23,8 @@ Component({
         CustomBar: {
             type: Number,
             value: 0
-        }, 
+        },
+        height: { type: String, value: "calc(100vh - 375rpx)" }
     }, 
     options: { styleIsolation: 'apply-shared'},
     /**

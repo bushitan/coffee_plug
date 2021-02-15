@@ -8,7 +8,8 @@ module.exports = Behavior({
     //准备完成
     ready() { 
         wx.navigateTo({
-            url: 'plugin://liteCupPlugin/temp',
+            url: 'plugin://liteCupPlugin/productMenu',  // temp 页面
+            // url: 'plugin://liteCupPlugin/temp',  // temp 页面
             // url : "plugin://liteCupPlugin/hello-page"
         })
     },

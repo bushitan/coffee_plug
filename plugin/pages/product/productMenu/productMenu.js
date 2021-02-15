@@ -1,37 +1,51 @@
 // pages_manager/seller/seller.js
 // var app = getApp() 
+var ProductData = require("../../../data/product.js")
+var CurrentItem = require("../../../data/currentItem.js")
+var MenuCartData = require("../../../data/menu-cart.js")
 Component({
 
     properties: {
     },
     data: { 
+
+        swiperList: [
+            {
+                id: 0,
+                type: 'image',
+                url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg',
+                page: "/pages/test/test"
+
+            }, {
+                id: 1,
+                type: 'image',
+                url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84001.jpg',
+                page: ""
+            }
+        ],
+
         list: [
         ],
+        ProductData: ProductData,
+        CurrentItem: CurrentItem,
+        MenuCartData: MenuCartData,
+        productCart:{},
     },
     // behaviors: [app.behaviors.config, ],
 
     attached() {
-        console.log("in temp")
 
+        console.log("attached temp")
+
+        // plugin - private://wxidxxxxxxxxxxxxxx/
         // wx.navigateTo({
-        //     // url: 'plugin://liteCupPlugin/temp',
-        //     // url: "plugin://liteCupPlugin/hello-page",
-        //     url: "/pages/test/test",
-        //     fail(res){
-        //         console.log(res)
-        //     }
+        //     url: 'plugin-private://wxd19bbe9cb3b293b6/pages/hello-page"',
+            
         // })
-
-
-        // console.log(getCurrentPages())
-        wx.redirectTo({
-            url: "/pages/test/test",
-        })
     },
     pageLifetimes: {
         show() {
             console.log("show temp")
-
         },
     },
     methods: {
@@ -43,7 +57,7 @@ Component({
             })
             this.onInit()
 
-            console.log("in temp")
+            console.log("onLoad temp")
         },
         async onInit(){
            

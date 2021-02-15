@@ -11,3 +11,7 @@
     right:0;
     height:15rpx; 
 }
+
+.screen-swiper{
+    min-height:50rpx;
+}
