@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "product-item": "../../../components/product/product-item/product-item",
+    "item": "../../../components/common/item/item"
+  }
+}

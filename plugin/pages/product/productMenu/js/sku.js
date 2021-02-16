@@ -48,18 +48,18 @@ module.exports = Behavior({
         },
 
         // 修改购物车数据
+        // var productKey = this.data.categoryIndex + "_" + this.data.productIndex + "_"
+        // var key = productKey + skuKey
         changeSelectMap(skuKey, isAdd) {
 
             if(Lock == true)
                 return
-            // var productKey = this.data.categoryIndex + "_" + this.data.productIndex + "_"
-            // var key = productKey + skuKey
             console.log(skuKey)
             var key = skuKey
             var selectMap = this.data.selectMap
             
             // // 没有参数,退出
-            if (selectMap.hasOwnProperty(key) == false)
+            if (selectMap.hasOwnProperty(key) == false && isAdd == false)
                 return
 
             if (isAdd) {

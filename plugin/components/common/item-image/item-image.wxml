@@ -1,0 +1,28 @@
+
+
+
+
+<view class="flex justify-between  {{customClass}}" catchtap="click">
+    <view class="flex text-cut">
+        <view>
+            <image class="cu-avatar {{ imageClass }} "  mode="aspectFill"
+            style="" src="{{image}}"></image>
+        
+        </view>
+        
+        <view class=" text-cut  padding-lr-sm" >
+            <view class="text-cut text-df text-black text-left">{{title}}{{title}}</view>
+            <view class="text-cut text-sm text-gray text-left">{{summary}}</view>
+            <slot name="title"/>
+            <slot name="summary"/>
+        </view>
+    </view>     
+        
+    <view class=" flex  align-center">
+        <slot  name="desc"/>
+        <text class="text-gray text-df">{{desc}}</text>
+        <text class="cuIcon-right {{arrowColor}}" wx:if="{{isArrow}}"></text>
+    </view>
+    
+</view>
+

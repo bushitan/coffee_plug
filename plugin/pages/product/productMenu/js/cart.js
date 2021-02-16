@@ -57,6 +57,7 @@ module.exports = Behavior({
                 var attIndex = list[i]
                 var valueIndex = list[i + 1]
                 try {
+                    var att = product.attributes[attIndex] 
                     var value = product.attributes[attIndex].attributeValues[valueIndex]
                     if (!value)
                         continue
@@ -64,7 +65,12 @@ module.exports = Behavior({
                     continue
                 }
                 price += value.cost
-                skuDesc += value.name + "   "
+                skuDesc += att.productAttributeName + "【"+value.name + "】"
+
+                // 中间加逗号
+                if (i < list.length-2)
+                    skuDesc += "，"
+                
             }
 
             return {
@@ -75,10 +81,19 @@ module.exports = Behavior({
 
         // 清理购物车
         clearCart(){
-            this.setData({
-                selectMap: {},
+            wx.showModal({
+                title: '是否清空购物车?',
+                success:res=>{
+                    if(res.confirm){
+                        this.setData({
+                            selectMap: {},
+                            showCart:false,
+                        })
+                        this.changeCart()
+                    }
+                }
+                
             })
-            this.changeCart()
         },
         // 打开购物车
         openCart() {

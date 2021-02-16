@@ -1,6 +1,7 @@
 {
   "publicComponents": {
     "item": "components/common/item/item",
+    "item-image": "components/common/item-image/item-image",
     "notice": "components/common/notice/notice",
     "swiper": "components/common/swiper/swiper",
     "dialog": "components/common/dialog/dialog",
@@ -22,6 +23,7 @@
     "product-sku": "components/product/product-sku/product-sku",
     "product-cart": "components/product/product-cart/product-cart",
     "product-bar": "components/product/product-bar/product-bar",
+    "product-item": "components/product/product-item/product-item",
 
     "order-mall": "components/order/order-mall/order-mall",
     "order-number": "components/order/order-number/order-number",
@@ -34,6 +36,7 @@
   },
   "pages": {
     "productMenu": "pages/product/productMenu/productMenu",
+    "productDetail": "pages/product/productDetail/productDetail",
     "temp": "pages/product/temp/temp",
     "hello-page": "pages/hello-page/hello-page"
   },

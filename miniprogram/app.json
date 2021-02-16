@@ -17,6 +17,7 @@
         "dialog-cover": "plugin://liteCupPlugin/dialog-cover",
         "notice": "plugin://liteCupPlugin/notice",
         "item": "plugin://liteCupPlugin/item",
+        "item-image": "plugin://liteCupPlugin/item-image",
     
         "nav-custom": "plugin://liteCupPlugin/nav-custom",
         "nav-date": "plugin://liteCupPlugin/nav-date",

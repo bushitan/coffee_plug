@@ -136,7 +136,49 @@ var data =  [
                                                                 "alt": ""
                                                             }
                                                         ],
+                                                        
                                                             "attributes": [
+                                                                {
+                                                                    "productAttributeID": 135,
+                                                                    "productAttributeName": "规格",
+                                                                    "isRequired": false,
+                                                                    "displayOrder": 0,
+                                                                    "attributeValues": [
+                                                                        {
+                                                                            "typeID": 0,
+                                                                            "associatedProductID": 0,
+                                                                            "name": "中杯",
+                                                                            "colorSquaresRgb": null,
+                                                                            "imageSquaresImage": 0,
+                                                                            "priceAdjustment": 0,
+                                                                            "weightAdjustment": 0,
+                                                                            "cost": 0,
+                                                                            "quantity": 1,
+                                                                            "is_pre_selected": false,
+                                                                            "display_order": 0,
+                                                                            "product_image_id": 0,
+                                                                            "type": 0,
+                                                                            "id": 220
+                                                                        },
+                                                                        {
+                                                                            "typeID": 0,
+                                                                            "associatedProductID": 0,
+                                                                            "name": "大杯",
+                                                                            "colorSquaresRgb": null,
+                                                                            "imageSquaresImage": 0,
+                                                                            "priceAdjustment": 0,
+                                                                            "weightAdjustment": 0,
+                                                                            "cost": 2,
+                                                                            "quantity": 1,
+                                                                            "is_pre_selected": false,
+                                                                            "display_order": 0,
+                                                                            "product_image_id": 0,
+                                                                            "type": 0,
+                                                                            "id": 221
+                                                                        },
+                                                                        
+                                                                    ]
+                                                                },
                                                                 {
                                                                     "productAttributeID": 135,
                                                                     "productAttributeName": "甜度",

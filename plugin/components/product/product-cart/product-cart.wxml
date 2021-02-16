@@ -1,9 +1,42 @@
 
 
+<view class=" padding-tb-sm">
+    <view class="" wx:for="{{order}}" wx:key="*this" wx:for-item="item" wx:for-index="key">
+        <product-item
+        name="{{item.name}}"
+        image="{{item.cover}}"
+        sku="{{item.skuDesc}}"
+        price="{{item.price}}"
+        count=""
+        > 
+            <view class=" flex justify-between align-center text-xxl">
+                <text class="cuIcon-roundleftfill-copy theme-text "   catchtap="cut" data-key="{{item.key}}"   ></text>
+                <text class="padding-lr-xs text-xl ">{{ item.Quantity || 0 }}</text>								
+                <text class="cuIcon-roundrightfill theme-text "  catchtap="add" data-key="{{item.key}}"  ></text>                        
+            </view>
+        </product-item>
+    </view>					
+</view>           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- <view class="padding-lr  text-left margin-top">
     <text class="line-red text-bold">{{shopDiscount}}</text>
 </view> -->
-<view class=" padding-tb-sm">
+<!-- <view class=" padding-tb-sm">
     <view class="flex align-start  padding-lr margin-tb-sm" wx:for="{{order}}" wx:key="*this" wx:for-item="item" wx:for-index="key">
         <view class="action">
             <image src='{{item.cover}}' class="cu-avatar radius xl  bg-gray margin-right-sm " mode="aspectFill"></image>
@@ -27,6 +60,23 @@
                 </view>
             </view>
         </view>
-    </view>					
-</view>           
 
+    </view>					
+</view>            -->
+<!-- 
+<view  wx:for="{{order}}" wx:key  wx:for-item="item" wx:for-index="key">
+    <item-image  
+        image="{{item.cover}}"
+        title="{{item.name}}{{item.name}}" 
+        summary="{{item.skuDesc}}" desc="" isIcon="{{true}}"  catchtap="clickItem" customClass="bg-white text-xl padding">
+        <view class="flex " slot="summary">
+            <text class="text-red text-price"></text>
+            <text class="text-red">{{item.price}}</text>
+        </view>
+        <view class=" flex justify-between align-center text-xxl" slot="desc">
+            <text class="cuIcon-roundleftfill-copy theme-text "   catchtap="cut" data-key="{{item.key}}"   ></text>
+            <text class="padding-lr-xs text-xl ">{{ item.Quantity || 0 }}</text>								
+            <text class="cuIcon-roundrightfill theme-text "  catchtap="add" data-key="{{item.key}}"  ></text>                        
+        </view>
+    </item-image>
+</view>  -->

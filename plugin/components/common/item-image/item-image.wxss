@@ -1,0 +1,24 @@
+/* components/swiper/swiper.wxss */
+
+.pg-radius-card{
+    overflow: hidden;    
+    border-top-left-radius:15rpx;
+    border-top-right-radius:15rpx;
+    z-index: 999;
+    position: absolute;
+    top:365rpx;
+    left: 0;
+    right:0;
+    height:15rpx; 
+}
+
+
+.title{ 
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}

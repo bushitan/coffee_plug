@@ -1,0 +1,50 @@
+
+
+<!-- 
+
+<view class="flex align-start  padding-lr margin-tb-sm" >
+    <view class="action">
+        <image src='{{image}}' class="cu-avatar radius xl  bg-gray margin-right-sm " mode="aspectFill"></image>
+    </view>
+    <view class="" style="width:100%">
+        <view class="text-black text-left">{{name}}{{name}}</view>
+        <view class="flex justify-between">
+            <view class="text-gray ">
+                <view class="text-gray  text-sm " >
+                    <text decode="{{true}}"  space="{{true}}"> {{sku}}</text>
+                </view>
+                <view class="flex ">
+                    <text class="text-red text-price"></text>
+                    <text class="text-red margin-right">{{price}}</text>
+                    <text class="" wx:if="{{count}}">x{{count}}</text>
+                </view>
+            </view>
+            <slot />
+        </view>
+    </view>
+</view>				 -->
+
+
+<view class="flex align-start  padding-lr margin-tb-sm" >
+    <view class="action">
+        <image src='{{image}}' class="cu-avatar radius xl  bg-gray margin-right-sm " mode="aspectFill"></image>
+    </view>
+    <view class="padding-right" style="width:100%">
+        <view class="text-black text-left">{{name}}{{name}}</view>
+        <view class="flex justify-between">
+            <view class="text-gray ">
+                <view class="text-gray  text-sm " >
+                    <text decode="{{true}}"  space="{{true}}"> {{sku}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="flex flex-direction justify-between align-ceenter ">
+        <view class="">        
+            <text class="text-bold text-price"></text>
+            <text class="text-bold ">{{price}}</text>
+        </view>
+        <text class="text-gray text-sm  margin-top-xs text-right" wx:if="{{count}}">x{{count}}</text>
+        <slot />
+    </view>
+</view>				

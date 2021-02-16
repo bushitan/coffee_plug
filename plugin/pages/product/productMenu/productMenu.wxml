@@ -39,7 +39,7 @@
         </view>
     </dialog>
 
-    <dialog show="{{showCart}}" 
+    <dialog show="{{!showCart}}" 
     title="购物车"  textConfirm="确定"  
     showCancel="{{false}}"
     showTop="{{!false}}" 
