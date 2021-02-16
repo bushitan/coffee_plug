@@ -13,10 +13,12 @@
                     <text class="text-price "></text>{{total || 0}}
                 </view>
             </view>                
-            <view class="text-gray text-sm flex align-center">{{name}}</view>
+            <view class="text-gray text-sm flex align-center">
+                <slot name="name"></slot>
+            </view>
         </view>
         <view class="">
-            <slot></slot>
+            <slot name="btn"></slot>
             <button class='cu-btn round theme-bg text-white shadow-blur margin-right-sm' catchtap="toPay" disabled="{{false}}">去结算</button>	
         </view>
     </view>

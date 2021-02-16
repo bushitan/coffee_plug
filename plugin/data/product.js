@@ -167,7 +167,7 @@ var data =  [
                                                                             "imageSquaresImage": 0,
                                                                             "priceAdjustment": 0,
                                                                             "weightAdjustment": 0,
-                                                                            "cost": 0,
+                                                                            "cost": 1,
                                                                             "quantity": 1,
                                                                             "is_pre_selected": false,
                                                                             "display_order": 0,
@@ -183,13 +183,69 @@ var data =  [
                                                                             "imageSquaresImage": 0,
                                                                             "priceAdjustment": 0,
                                                                             "weightAdjustment": 0,
-                                                                            "cost": 0,
+                                                                            "cost": 2,
                                                                             "quantity": 1,
                                                                             "is_pre_selected": false,
                                                                             "display_order": 0,
                                                                             "product_image_id": 0,
                                                                             "type": 0,
                                                                             "id": 222
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "productAttributeID": 135,
+                                                                    "productAttributeName": "冰量",
+                                                                    "isRequired": false,
+                                                                    "displayOrder": 0,
+                                                                    "attributeValues": [
+                                                                        {
+                                                                            "typeID": 0,
+                                                                            "associatedProductID": 0,
+                                                                            "name": "正常",
+                                                                            "colorSquaresRgb": null,
+                                                                            "imageSquaresImage": 0,
+                                                                            "priceAdjustment": 0,
+                                                                            "weightAdjustment": 0,
+                                                                            "cost": 0,
+                                                                            "quantity": 1,
+                                                                            "is_pre_selected": false,
+                                                                            "display_order": 0,
+                                                                            "product_image_id": 0,
+                                                                            "type": 0,
+                                                                            "id": 120
+                                                                        },
+                                                                        {
+                                                                            "typeID": 0,
+                                                                            "associatedProductID": 0,
+                                                                            "name": "去冰",
+                                                                            "colorSquaresRgb": null,
+                                                                            "imageSquaresImage": 0,
+                                                                            "priceAdjustment": 0,
+                                                                            "weightAdjustment": 0,
+                                                                            "cost": 2,
+                                                                            "quantity": 1,
+                                                                            "is_pre_selected": false,
+                                                                            "display_order": 0,
+                                                                            "product_image_id": 0,
+                                                                            "type": 0,
+                                                                            "id": 121
+                                                                        },
+                                                                        {
+                                                                            "typeID": 0,
+                                                                            "associatedProductID": 0,
+                                                                            "name": "加冰",
+                                                                            "colorSquaresRgb": null,
+                                                                            "imageSquaresImage": 0,
+                                                                            "priceAdjustment": 0,
+                                                                            "weightAdjustment": 0,
+                                                                            "cost": 3,
+                                                                            "quantity": 1,
+                                                                            "is_pre_selected": false,
+                                                                            "display_order": 0,
+                                                                            "product_image_id": 0,
+                                                                            "type": 0,
+                                                                            "id": 122
                                                                         }
                                                                     ]
                                                                 }

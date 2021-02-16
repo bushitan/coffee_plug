@@ -1,32 +1,63 @@
 <!--pages/test/test.wxml-->
 
 <nav-custom bgColor="" isBack="{{true}}">
-    <view slot="backText" class="text-white">返回</view>
+    <!-- <view slot="backText" class="text-white">返回</view> -->
     <!-- <view slot="content">卡片</view> -->
 </nav-custom>
 
 <view class="theme-yellow">
 
-    <common-swiper list="{{swiperList}}" isBottom="{{!true}}" bindclick="clickSwiper" height="200rpx" ></common-swiper>
+    <common-swiper list="{{swiperList}}" isBottom="{{true}}" bindclick="clickSwiper" height="300rpx" ></common-swiper>
 
 
+    <item icon="location"  title="Seeking鲤湾店" desc="选择" isIcon="{{true}}" isArrow="{{true}}" catchtap="selectShop" customClass="bg-white padding-lr item">
+        <!-- <view class="cu-tag" slot="title">拉拉阿拉</view>
+        <view class="cu-tag" slot="desc">哈哈哈</view>     -->
+    </item>
 
-    <menu-phone list="{{ProductData}}" order="{{productCart}}"  height="calc(100vh - 200rpx)"></menu-phone>
 
-    <dialog show="{{!true}}" title="查询时间范围"  textConfirm="查询" bindsuccess="dialogConfirm" showTop="{{false}}" showBottom="{{false}}"> 
-    <view slot="content" class="bg-white "  style="position:relative">
-            <product-detail currentItem="{{CurrentItem}}"  height="80vh" ></product-detail>
-            <product-sku  currentItem="{{CurrentItem}}" ></product-sku>
+    <menu-phone list="{{ProductData}}" selectMap="{{selectMap}}"  height="calc(100vh - 300rpx - 80rpx)" bind:clickProduct="clickProduct"></menu-phone>
+
+    <dialog show="{{showProduct}}"   
+    showTop="{{false}}" 
+    showBottom="{{false}}" 
+    showAutoClose="{{true}}" 
+    isTouchClose="{{true}}"> 
+        <view slot="content" class="bg-white "  style="position:relative">
+            <product-detail 
+                product="{{ProductData[categoryIndex].products[productIndex]}}" 
+                height="80vh" 
+            ></product-detail>
+            <product-sku  
+                product="{{ProductData[categoryIndex].products[productIndex]}}" 
+                categoryIndex="{{categoryIndex}}" 
+                productIndex="{{productIndex}}" 
+                selectMap="{{selectMap}}" 
+                currentNum="{{selectMap}}"
+                bind:add="add"  bind:cut="cut" 
+            ></product-sku>
         </view>
     </dialog>
 
-    <dialog show="{{!true}}" title="购物车"  textConfirm="确定"  showCancel="{{false}}" showTop="{{!false}}" showBottom="{{!false}}"> 
-        <button  slot="top" class="cu-btn bg-red round " catchtap="clear">清空</button>
-        <product-cart slot="content" order="{{MenuCartData}}"  show="{{!cartShow}}" ></product-cart>
+    <dialog show="{{showCart}}" 
+    title="购物车"  textConfirm="确定"  
+    showCancel="{{false}}"
+    showTop="{{!false}}" 
+    showBottom="{{!false}}"
+    isTouchClose="{{true}}"> 
+        <button  slot="top" class="cu-btn bg-red round " catchtap="clearCart">清空</button>
+        <view class="bg-white" slot="content" >
+            <product-cart show="{{!cartShow}}"
+                order="{{cartList}}"   
+                bind:add="add"  
+                bind:cut="cut" 
+            ></product-cart>
+        </view>
     </dialog>
 
-    <product-bar order="{{MenuCartData}}" bind:pay="menuToPay"  bind:cart="menuOpenCart" >
-        <navigator class='cu-btn margin-right-sm round shadow-blur text-gray ' catchtap="menuOpenCart" >购物车</navigator>
+    <product-bar order="{{cartList}}" bind:pay="menuToPay"  bind:cart="openCart" >
+        <text slot="name" >全场9折</text>
+        <navigator slot="btn" class='cu-btn margin-right-sm round shadow-blur text-gray ' catchtap="openCart" >购物车</navigator>
     </product-bar> 
 
 

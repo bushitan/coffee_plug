@@ -1,2 +1,5 @@
 /* pages/test/test.wxss */
 
+.item{
+    height: 80rpx;
+}

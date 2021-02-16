@@ -1,12 +1,12 @@
 <!-- showTop="{{false}}" -->
 
-<common-swiper list="{{swiperList}}"  bindclick="clickSwiper" ></common-swiper>
+<common-swiper list="{{swiperList}}" height="680rpx"  bindclick="clickSwiper" ></common-swiper>
 <view class="padding-lr margin-top">
-    <view class="flex flex-start" wx:if="{{currentItem.tags.length>0}}">
-        <text class="cu-tag  radius  text-sm margin-right-sm padding-xs"
-            wx:for="{{currentItem.tags}}"  wx:key="*this"  wx:for-item="tag" wx:for-index="tagIndex">{{tag}}</text>	
+    <view class="flex flex-start" wx:if="{{product.tags.length>0}}">
+        <text class="cu-tag  round sm  text-sm margin-right-sm padding-xs"
+            wx:for="{{product.tags}}"  wx:key="*this"  wx:for-item="tag" wx:for-index="tagIndex">{{tag}}</text>	
     </view>
-    <view class="radius text-sm text-left margin-top-sm"  wx:if="{{currentItem.shortDescription}}">{{currentItem.shortDescription || ""}}</view>			
+    <view class="radius text-sm text-left margin-top-sm"  wx:if="{{product.shortDescription}}">{{product.shortDescription || ""}}</view>			
 </view>
 
 <!-- <view class="pg-space-xxl"></view>

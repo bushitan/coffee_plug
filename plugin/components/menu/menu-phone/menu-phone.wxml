@@ -23,27 +23,27 @@
                     <text class="cuIcon-title text-blue"></text>{{category.category.cate_name}}
                 </view>
             </view>       
-            <view class="cu-list menu ">
-                <view class="cu-item "  style="align-items: start;"
-                wx:for="{{category.products}}" wx:key wx:for-item="item" wx:for-index="itemIndex" 
-                catchtap="openDetail" data-categoryindex="{{categoryindex}}" data-itemindex="{{itemIndex}}" >                    
+            <view class="cu-list menu bg-white">
+                <view class="cu-item margin-bottom"  style="align-items: start;"
+                wx:for="{{category.products}}" wx:key wx:for-item="product" wx:for-index="productIndex" 
+                catchtap="openDetail" data-categoryindex="{{categoryindex}}" data-productindex="{{productIndex}}" >                    
                     <view class="">
-                        <image src='{{item.imgs[0].src}}'
+                        <image src='{{product.imgs[0].src}}'
                             class="cu-avatar radius xl  bg-gray margin-right-sm " 
                             mode="aspectFill"
                             ></image>
                     </view>							
-                    <view class="action basis-xl padding-bottom" >
-                        <view class=" text-black text-bold text-df"> {{item.name}}</view>     
-                        <view class="text-gray text-xs margin-top-xs">今日销售（字段缺失）</view>	
+                    <view class="action basis-xl " >
+                        <view class=" text-black text-bold text-df "> {{product.name}}</view>     
+                        <view class="text-gray text-xs margin-top-xs">23123</view>	
                         <view class="margin-top-xs flex justify-between align-center">
                             <view class="text-red text-lg">
-                                <text class="text-price"></text>{{item.price}}
+                                <text class="text-price"></text>{{product.price}}
                             </view>
                             <view style="position:relative">
                                 <button class="cu-btn round line-yellow  sm" >选规格</button>
-                                <view class="cu-tag badge" wx:if="{{orderObj[categoryindex+'_'+itemIndex]>0}}">
-                                {{orderObj[categoryindex+'_'+itemIndex]}}</view>	                                
+                                <view class="cu-tag badge" wx:if="{{orderObj[categoryindex+'_'+productIndex]>0}}">
+                                {{orderObj[categoryindex+'_'+productIndex]}}</view>	                                
                             </view>
                         </view>
                     </view>							

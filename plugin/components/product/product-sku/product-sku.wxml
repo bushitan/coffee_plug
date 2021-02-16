@@ -1,17 +1,19 @@
 <!-- showTop="{{false}}" -->
 
 
-<view class="padding-lr margin-top " wx:for="{{currentItem.attributes}}"  wx:key="*this" wx:for-item="att"  wx:for-index="attIndex">
+<view class="padding-lr  " wx:for="{{product.attributes}}"  wx:key="*this" wx:for-item="att"  wx:for-index="attIndex">
     <view class=" text-left margin-top-sm text-gray text-sm">{{att.productAttributeName}}</view>
-    <view class="flex flex-start flex-wrap margin-top-sm">	
-        <view class="text-sm text-center margin-right-sm margin-bottom-sm" 
+    <view class="flex flex-start flex-wrap ">	
+        <view class="text-sm text-center margin-right-sm margin-top-xs" 
         wx:for="{{ att.attributeValues }}" wx:key="*this"  wx:for-item="value" wx:for-index="valueIndex">
-            <button class="cu-btn radius {{att.attributeValues[valueIndex].isSelect?'theme-bg text-white' :'line-gray'}}"                     
-            catchtap="clickAtt"
+            <button class="cu-btn radius {{ select[attIndex] == valueIndex ?'theme-bg text-white' :'line-gray'}}"                     
+            catchtap="clickSKU"
             data-attindex="{{attIndex}}"
             data-valueindex="{{valueIndex}}"
-            >{{value.name}}
-            </button>		
+            >
+                {{value.name}}
+                <view class="cu-tag badge  " wx:if="{{value.cost>0}}" style="z-index:2">+{{value.cost}}</view>	
+            </button>	
         </view>
     </view>
 </view>                                 
@@ -19,21 +21,20 @@
     <view class="flex justify-between align-center text-xxl">						
         <view class=" ">
             <text class="text-price text-red text-xxl text-bold"></text>
-            <text class="text-red text-xxl text-bold">{{ currentItem.price}}</text>
-            <text  hidden="{{order[key]?order[key].attDes == ''? true:false : true}}">
+            <text class="text-red text-xxl text-bold">{{ selectPrice}}</text>
+
+            <!-- <text  hidden="{{order[key]?order[key].attDes == ''? true:false : true}}">
                 <text class="text-gray text-sm margin-left" >已选规格：</text>
                 <text class="text-sm">{{order[key]?  order[key].attDes:""}}	</text>	
-            </text>
+            </text> -->
         </view>				
         <view class="flex justify-between align-center">                        
-            <text class="cuIcon-roundleftfill-copy theme-text text-sl" catchtap="cutItem" 	hidden="{{order[key]? false : true}}"></text>
-            <text class="padding-lr-sm">{{ order[key].Quantity || 0 }}</text>	
-            <text class="cuIcon-roundrightfill theme-text text-sl"  catchtap="addItem"></text>
+            <text class="cuIcon-roundleftfill-copy theme-text  " catchtap="cut" 	hidden="{{selectMap[currentSKUKey] > 0 ? false : true}}"></text>
+            <text class="padding-lr-sm">{{ selectMap[currentSKUKey] || 0 }}</text>	
+            <text class="cuIcon-roundrightfill theme-text "  catchtap="add"></text>
         </view>						
     </view>
 </view>
-
-
 
 
 

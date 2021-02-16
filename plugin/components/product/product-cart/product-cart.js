@@ -19,6 +19,13 @@ Component({
         isMirror: { type: Boolean, value: false }, // 是否镜像
     }, 
     options: { styleIsolation: 'apply-shared'},
+    // 监听器
+    observers: {
+        // // 监听list， 生成产品菜单的高度信息
+        // 'order': function (order) {
+        //     // var productViewList = []
+        // },
+    },
     /**
      * 组件的初始数据
      */
@@ -40,10 +47,18 @@ Component({
             this.triggerEvent('clear')
         },
         /**
-         * @method 关闭
+         * @method 增加
          */
-        close(e) {
-            this.setData({show:false,})
+        add(e) {
+            console.log(e.currentTarget.dataset.key)
+            this.triggerEvent('add', e.currentTarget.dataset.key)
+        },
+        /**
+         * @method 减少
+         */
+        cut(e) {
+            console.log(e.currentTarget.dataset.key)
+            this.triggerEvent('cut', e.currentTarget.dataset.key)
         },
 
     }

@@ -1,8 +1,8 @@
 <!--components/bar/bar.wxml-->
 <!-- backdrop-sm -->
  <!-- style="position: absolute;top:120rpx;bottom:120rpx;left: 0;right: 0;" -->
-<view class="cu-modal {{show?'show':''}}  {{config.theme}} " style="padding:100rpx 0">
-    <view class="cu-dialog " style="position: relative;">
+<view class="cu-modal {{show?'show':''}}  {{config.theme}} " style="padding:100rpx 0" bindtap="touchHideModal">
+    <view class="cu-dialog " style="position: relative;" catchtap="clickDialog">
         <view class="cu-bar bg-white justify-between" wx:if="{{showTop}}">   
             
             <view class="action" >

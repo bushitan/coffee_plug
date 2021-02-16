@@ -17,7 +17,7 @@ Component({
         show: { type: Boolean, value: true }, //是否展示
         name: { type: String, value: "Seeking 鲤湾路" }, // 是否镜像
     }, 
-    options: { styleIsolation: 'apply-shared'},
+    options: { styleIsolation: 'apply-shared', multipleSlots:true,},
     /**
      * 组件的初始数据
      */

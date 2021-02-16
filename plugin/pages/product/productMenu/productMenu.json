@@ -2,6 +2,7 @@
     "navigationStyle": "custom",
     "usingComponents": {
         "nav-custom": "../../../components/nav/nav-custom/nav-custom",
+        "item": "../../../components/common/item/item",
         "dialog": "../../../components/common/dialog/dialog",
         "common-swiper": "../../../components/common/swiper/swiper",
         "menu-phone": "../../../components/menu/menu-phone/menu-phone",

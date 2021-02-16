@@ -3,35 +3,38 @@
 var ProductData = require("../../../data/product.js")
 var CurrentItem = require("../../../data/currentItem.js")
 var MenuCartData = require("../../../data/menu-cart.js")
+var Operate = require("js/operate.js")
+var SKU = require("js/sku.js")
+var Cart = require("js/cart.js")
 Component({
 
     properties: {
     },
     data: { 
 
-        swiperList: [
-            {
-                id: 0,
-                type: 'image',
-                url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg',
-                page: "/pages/test/test"
+        // swiperList: [
+        //     {
+        //         id: 0,
+        //         type: 'image',
+        //         url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg',
+        //         page: "/pages/test/test"
 
-            }, {
-                id: 1,
-                type: 'image',
-                url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84001.jpg',
-                page: ""
-            }
-        ],
+        //     }, {
+        //         id: 1,
+        //         type: 'image',
+        //         url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84001.jpg',
+        //         page: ""
+        //     }
+        // ],
 
-        list: [
-        ],
-        ProductData: ProductData,
-        CurrentItem: CurrentItem,
-        MenuCartData: MenuCartData,
-        productCart:{},
+        // list: [
+        // ],
+        // ProductData: ProductData,
+        // CurrentItem: CurrentItem,
+        // MenuCartData: MenuCartData,
+        // productCart:{},
     },
-    // behaviors: [app.behaviors.config, ],
+    behaviors: [Operate, SKU, Cart] ,  
 
     attached() {
 
@@ -51,11 +54,11 @@ Component({
     methods: {
 
         onLoad(options) {
-            this.setData({
-                tabbarIndex: options.tabbarIndex || 0,
-                tabIndex: options.tabIndex || 0,
-            })
-            this.onInit()
+            // this.setData({
+            //     tabbarIndex: options.tabbarIndex || 0,
+            //     tabIndex: options.tabIndex || 0,
+            // })
+            // this.onInit()
 
             console.log("onLoad temp")
         },
@@ -63,7 +66,7 @@ Component({
            
         },
 
-
+    
 
 
 

@@ -3,8 +3,8 @@
 <!-- <view class="padding-lr  text-left margin-top">
     <text class="line-red text-bold">{{shopDiscount}}</text>
 </view> -->
-<view class="margin-top">
-    <view class="flex align-start  padding-lr margin-bottom" wx:for="{{order}}" wx:key="*this" wx:for-item="item" wx:for-index="key">
+<view class=" padding-tb-sm">
+    <view class="flex align-start  padding-lr margin-tb-sm" wx:for="{{order}}" wx:key="*this" wx:for-item="item" wx:for-index="key">
         <view class="action">
             <image src='{{item.cover}}' class="cu-avatar radius xl  bg-gray margin-right-sm " mode="aspectFill"></image>
         </view>
@@ -12,30 +12,18 @@
             <view class="text-black text-left">{{item.name}}</view>
             <view class="flex justify-between">
                 <view class="text-gray ">
-                    <view class="text-gray  text-sm text-left" >
-                        <text decode="{{true}}"  space="{{true}}"> {{item.attDes}} &nbsp;</text>
+                    <view class="text-gray  text-sm " >
+                        <text decode="{{true}}"  space="{{true}}"> {{item.skuDesc}}</text>
                     </view>
-                    <text class="text-price"></text>
-                    <text class="text-red">{{item.total}}</text>
+                    <view class="flex ">
+                        <text class="text-red text-price"></text>
+                        <text class="text-red">{{item.price}}</text>
+                    </view>
                 </view>
-                <view class="text-gray  flex justify-between align-center">
-                    <text   class="cuIcon-roundleftfill-copy theme-text text-sl" 
-                        catchtap="cutOrder"
-                        data-key="{{key}}"
-                        data-categoryindex="{{item.categoryIndex}}"
-                        data-itemindex="{{item.itemIndex}}"
-                        data-attindex="{{item.attIndex}}"
-                        data-valueindex="{{item.valueIndex}}"
-                    ></text>
-                    <text class="padding-lr-xs text-xxl ">{{ order[key].Quantity || 0 }}</text>								
-                    <text class="cuIcon-roundrightfill theme-text text-sl" 
-                        catchtap="addOrder"
-                        data-key="{{key}}"
-                        data-categoryindex="{{item.categoryIndex}}"
-                        data-itemindex="{{item.itemIndex}}"
-                        data-attindex="{{item.attIndex}}"
-                        data-valueindex="{{item.valueIndex}}"
-                    ></text>                        
+                <view class=" flex justify-between align-center text-xxl">
+                    <text class="cuIcon-roundleftfill-copy theme-text "   catchtap="cut" data-key="{{item.key}}"   ></text>
+                    <text class="padding-lr-xs text-xl ">{{ item.Quantity || 0 }}</text>								
+                    <text class="cuIcon-roundrightfill theme-text "  catchtap="add" data-key="{{item.key}}"  ></text>                        
                 </view>
             </view>
         </view>

@@ -14,7 +14,7 @@ Component({
      */
     properties: {
         list: { type: Array },
-        order: { type: Object },
+        selectMap: { type: Object },
         StatusBar: {
             type: Number,
             value: 0
@@ -70,15 +70,16 @@ Component({
         },
 
         // 监测购物车数据，同步到已选数量
-        'order': function (order) {
+        'selectMap': function (selectMap) {
             var temp = {}
-            for(var key in order){
+            for (var key in selectMap){
                 var i = key.split("_")[0]
                 var j = key.split("_")[1]
                 var newKey = i + "_" + j
                 temp[newKey] = temp[newKey] || 0 //防止数量为0
-                temp[newKey] = temp[newKey] + order[key].Quantity
+                temp[newKey] = temp[newKey] + selectMap[key]
             }
+            // console.log(temp)
             this.setData({ orderObj: temp})
         }
     },
@@ -90,8 +91,13 @@ Component({
     methods: {
         
         openDetail(e) {
-            console.log(e.currentTarget.dataset.categoryindex)
-            console.log(e.currentTarget.dataset.itemindex)
+            // console.log(e.currentTarget.dataset.categoryindex)
+            // console.log(e.currentTarget.dataset.productindex)
+            
+            this.triggerEvent("clickProduct", {
+                categoryIndex: e.currentTarget.dataset.categoryindex,
+                productIndex: e.currentTarget.dataset.productindex,
+            })
         },
         /**
          * @method 点击左边，让右边滚动

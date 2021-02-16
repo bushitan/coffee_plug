@@ -34,6 +34,8 @@ Component({
         // 主动关闭按钮
         showAutoClose: { type: Boolean, value: false },
         autoCloseText: { type: String, value: "text-white" },
+
+        isTouchClose: { type: Boolean, value: false },
     },
     // behaviors: [app.behaviors.config],
     options: { styleIsolation: 'apply-shared', multipleSlots: true },
@@ -57,8 +59,16 @@ Component({
             })
         },
 
+        clickDialog(){
+            console.log("clickDialog")
+        },
+        touchHideModal(){
+            this.hideModal()
+        },
+
         hideModal(){
-            this.setData({show:false})
+            if (this.data.isTouchClose)
+                this.setData({show:false})
         },
 
         clickConfirm(){

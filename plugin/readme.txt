@@ -49,8 +49,8 @@ components  插件目录
 
 pages  组件目录
 -- product 产品相关
----- menu 自助点单，自助点单页面
----- detail 自助点单，自助点单页面
+---- productMenu 自助点单，自助点单页面 √
+---- productDetail 自助点单，自助点单页面
 
 -- order 订单
 ---- orderList 订单列表
