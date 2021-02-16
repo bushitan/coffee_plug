@@ -19,8 +19,16 @@ module.exports = Behavior({
         menuOpenCart() { this.setData({ cartShow: true }) },
 
 
-        clickItem() { console.log("clickItem") }
+        clickItem() { console.log("clickItem") },
 
+        nav(){
+            wx.navigateTo({
+                // url: 'plugin://liteCupPlugin/productMenu',  // temp 页面
+                url: 'plugin://liteCupPlugin/productDetail',  // temp 页面
+                // url: 'plugin://liteCupPlugin/temp',  // temp 页面
+                // url : "plugin://liteCupPlugin/hello-page"
+            })
+        },
 
         // onLoad: function (options) {
         //    // 页面创建时执行 组件内不触发

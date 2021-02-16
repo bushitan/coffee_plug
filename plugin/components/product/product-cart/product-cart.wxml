@@ -1,7 +1,7 @@
 
 
-<view class=" padding-tb-sm">
-    <view class="" wx:for="{{order}}" wx:key="*this" wx:for-item="item" wx:for-index="key">
+<view class=" padding-lr">
+    <view class="padding-top" wx:for="{{order}}" wx:key="*this" wx:for-item="item" wx:for-index="key">
         <product-item
         name="{{item.name}}"
         image="{{item.cover}}"

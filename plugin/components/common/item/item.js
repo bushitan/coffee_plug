@@ -14,16 +14,16 @@ Component({
      */
     properties: {
         customClass: { type: String, value: "" },
-        icon: { type: String,  value: "commentfill" },
+        icon: { type: String, value: "" },  //commentfill
         title: { type: String, value: "" },
         desc: { type: String, value: "" },
 
-        isIcon: { type: Boolean, value: true },
-        isArrow: { type: Boolean, value: true },
-        iconColor: { type: String, value: "theme-text" },
-        titleColor: { type: String, value: "text-black" },
-        descColor: { type: String, value: "text-gray" },
-        arrowColor: { type: String, value: "text-gray" },
+        // isIcon: { type: Boolean, value: true },
+        isArrow: { type: Boolean, value: false },
+        iconClass: { type: String, value: "theme-text" },
+        titleClass: { type: String, value: "text-black" },
+        descClass: { type: String, value: "text-gray" },
+        arrowClass: { type: String, value: "text-gray" },
     },
     // behaviors: [app.behaviors.config],
     options: { styleIsolation: 'apply-shared' ,multipleSlots:true,},

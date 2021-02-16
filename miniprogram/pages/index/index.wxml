@@ -21,7 +21,7 @@
 
 
 
-
+<button catchtap="nav">跳转</button>
 
 
 

@@ -1,27 +1,86 @@
 <!--pages/test/test.wxml-->
 
-<view wx:for="{{cartList}}">
-  <product-item
-        name="{{item.name}}"
-        image="{{item.cover}}"
-        sku="{{item.skuDesc}}"
-        price="{{item.price}}"
-        count="{{item.Quantity}}"
-        > 
-            <!-- <text class="text-red tex-bold">
-                <text class="text-price"></text>
-                <text class="">{{item.price * item.Quantity}}</text>
-            </text> -->
-            <!-- <view class=" flex justify-between align-center text-xxl">
-                <text class="cuIcon-roundleftfill-copy theme-text "   catchtap="cut" data-key="{{item.key}}"   ></text>
-                <text class="padding-lr-xs text-xl ">{{ item.Quantity || 0 }}</text>								
-                <text class="cuIcon-roundrightfill theme-text "  catchtap="add" data-key="{{item.key}}"  ></text>                        
-            </view> -->
-        </product-item>
+<!-- <product-address></product-address> -->
+<view class="padding text-df">
+    <view class="bg-white radius padding">
+        <item  title="" desc="" icon="location" isArrow="{{true}}"  catchtap="" 
+            customClass="" iconClass="text-xl margin-right-xs"> 
+            <view class="" slot="title">
+                <view class="">自提地址</view>
+                <view class="text-gray">广西那凝视</view>
+            </view>
+        </item>
+        <item  title="" desc="" icon="time" isArrow="{{true}}"  catchtap="" 
+            customClass="margin-top" iconClass="text-xl margin-right-xs"> 
+            <view class="" slot="title">
+                <text class="margin-right-xs">自提时间</text>
+                <text class="">明天 08:30</text>
+            </view>
+        </item>
+        <functional-page-navigator
+            name="chooseAddress"
+            version="develop"
+            bind:success="onSuccess"
+            bind:fail="onFail"
+        >
+        <item  title="" desc="" icon="phone" isArrow="{{true}}"   
+            customClass="margin-top" iconClass="text-xl margin-right-xs"> 
+              <view class="" slot="title">预留电话</view>
+              <view class=" text-gray" slot="desc">152771266781</view>
+        </item>        
+        </functional-page-navigator>
+        
+        <item  title="" desc="" icon="phone" isArrow="{{true}}"   
+            customClass="margin-top" iconClass="text-xl margin-right-xs"> 
+              <view class="" slot="title">输入电话</view>
+              <input class=" text-gray" slot="desc"></input>
+        </item>      
+    </view>
 </view>
 
 
-<item  title="title" desc="desc" isIcon="{{true}}" isArrow="{{true}}" catchtap="clickItem" customClass="bg-white text-xl padding">
-    <view class="cu-tag" slot="title">拉拉阿拉</view>
-    <view class="cu-tag" slot="desc">哈哈哈</view>
-</item>
+<view class="bg-white padding-xl text-black">
+    <view class="margin-top-xl" wx:for="{{cartList}}">
+    <product-item
+            name="{{item.name}}"
+            image="{{item.cover}}"
+            sku="{{item.skuDesc}}"
+            price="{{item.price}}"
+            count="{{item.Quantity}}"
+            > 
+                <!-- <text class="text-red tex-bold">
+                    <text class="text-price"></text>
+                    <text class="">{{item.price * item.Quantity}}</text>
+                </text> -->
+                <!-- <view class=" flex justify-between align-center text-xxl">
+                    <text class="cuIcon-roundleftfill-copy theme-text "   catchtap="cut" data-key="{{item.key}}"   ></text>
+                    <text class="padding-lr-xs text-xl ">{{ item.Quantity || 0 }}</text>								
+                    <text class="cuIcon-roundrightfill theme-text "  catchtap="add" data-key="{{item.key}}"  ></text>                        
+                </view> -->
+            </product-item>
+    </view>
+    <view class="solid-bottom padding-top-xl"></view>
+    <item  title="" desc="" icon=""  catchtap="" customClass="margin-top-xl">
+        <text class=" text-gray" slot="title">商品总价</text>
+        <text class=" text-bold text-price" slot="desc">38.00</text>
+    </item>
+    <item  title="" desc="" icon=""   catchtap="" customClass="margin-top-sm">
+        <text class=" text-gray" slot="title">订单运费</text>
+        <text class=" text-bold text-price" slot="desc">0.00</text>
+    </item>
+    <item  title="" desc="" icon=""   catchtap="" customClass="margin-top-sm">
+        <text class=" text-gray" slot="title">订单优惠</text>
+        <text class=" text-bold " slot="desc">
+            <text class="text-price"></text>-3.00
+        </text>
+    </item>
+    <item  title="" desc="" icon=""   catchtap="" customClass="margin-top-sm">
+        <text class="  " slot="desc">
+            <text class="margin-right">共4件,实付款</text>
+            <text class="text-xxl text-bold text-red">
+                <text class="text-price "></text>128.90
+            </text>
+        </text>
+    </item>
+</view>
+

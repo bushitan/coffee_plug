@@ -106,7 +106,12 @@ Component({
            
         },
 
-
+        onSuccess: function (res) {
+            console.log(res.detail);
+        },
+        onFail: function (res) {
+            console.log(res);
+        }
 
 
 

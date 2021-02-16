@@ -30,6 +30,8 @@ components  插件目录
 ---- product-sku 产品SKU 【SKU添加、取消操作】√
 ---- product-cart 购物车，已选产品 【加减数据按钮，返回inde，由页面操作】√
 ---- product-bar 菜单底部操作栏目【打开购物车，当前金额，去下单】√
+---- product-item 订单的节点【提供购物车和订单详情使用】√
+---- product-address 订单的节点【提供购物车和订单详情使用】√
 
 -- order 订单
 ---- order-detail 订单详情【仅仅展示数据，不含退款、扫码操作】√
