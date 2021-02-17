@@ -55,14 +55,23 @@ components  插件目录
 pages  组件目录
 -- product 产品相关
 ---- productMenu 自助点单，自助点单页面 √
----- productDetail 自助点单，自助点单页面
+---- productConfirm 订单确认 √
 
 -- order 订单
 ---- orderList 订单列表
----- orderDetail 订单详情
----- refundDetail 售后订单详情
+---- orderDetail 订单详情 √
 
+--store
+----storeList 门店列表
 
+--coupon
+----couponList
+
+--gift
+----giftList
+
+--score
+----scoreList
 
 
 

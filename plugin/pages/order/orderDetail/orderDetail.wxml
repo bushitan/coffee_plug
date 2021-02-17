@@ -1,0 +1,128 @@
+<!--pages/test/test.wxml-->
+
+<!-- <product-address></product-address> -->
+<view class="">
+    <view class="padding-sm">
+        <view class="bg-green light  pg-radius text-center text-white text-bold text-xl " style="padding:100rpx">
+            待付款
+        </view>
+        <view class="bg-yellow light  pg-radius text-center text-white text-bold text-xl margin-top " style="padding:100rpx">
+            待收货
+        </view>
+        <view class="bg-red light  pg-radius text-center text-white text-bold text-xl  margin-top" style="padding:100rpx">
+            商家处理中  已取消   退款成功
+        </view>
+    </view>
+    <view class="bg-white  padding-lr-xl text-black">
+        <item  title="" desc="" icon=""  catchtap="" customClass="margin-top">
+            <text class="text-xl" slot="title">订单信息</text>
+        </item>
+        <view class="flex justify-center">        
+            <image src="/images/icon/icon_qr.png" mode="widthFit" style="width:200rpx;height:200rpx;"></image>
+        </view>
+        <item  title="" desc="" icon=""  catchtap="" customClass="margin-top-xl">
+            <text class=" text-gray" slot="title">订单编号</text>
+            <text class=" text-bold " slot="desc">32478327589216710</text>
+        </item>
+        <item  title="" desc="" icon=""  catchtap="" customClass="margin-top">
+            <text class=" text-gray" slot="title">下单时间</text>
+            <text class=" text-bold " slot="desc">2021-1-21 23:33:51</text>
+        </item>
+
+        <item  title="" desc="" icon=""  catchtap="" customClass="margin-top-xl">
+            <text class="text-xl" slot="title">商品信息</text>
+        </item>
+
+
+        <view class="margin-top-xl" wx:for="{{cartList}}">
+            <product-item
+                    name="{{item.name}}"
+                    image="{{item.cover}}"
+                    sku="{{item.skuDesc}}"
+                    price="{{item.price}}"
+                    count="{{item.Quantity}}"
+                    > 
+                        <!-- <text class="text-red tex-bold">
+                            <text class="text-price"></text>
+                            <text class="">{{item.price * item.Quantity}}</text>
+                        </text> -->
+                        <!-- <view class=" flex justify-between align-center text-xxl">
+                            <text class="cuIcon-roundleftfill-copy theme-text "   catchtap="cut" data-key="{{item.key}}"   ></text>
+                            <text class="padding-lr-xs text-xl ">{{ item.Quantity || 0 }}</text>								
+                            <text class="cuIcon-roundrightfill theme-text "  catchtap="add" data-key="{{item.key}}"  ></text>                        
+                        </view> -->
+            </product-item>
+        </view>
+        <view class="solid-bottom padding-top-xl"></view>
+        <item  title="" desc="" icon=""  catchtap="" customClass="margin-top-xl">
+            <text class=" text-gray" slot="title">商品总价</text>
+            <text class=" text-bold text-price" slot="desc">38.00</text>
+        </item>
+        <item  title="" desc="" icon=""   catchtap="" customClass="margin-top-sm">
+            <text class=" text-gray" slot="title">订单运费</text>
+            <text class=" text-bold text-price" slot="desc">0.00</text>
+        </item>
+        <item  title="" desc="" icon=""   catchtap="" customClass="margin-top-sm">
+            <text class=" text-gray" slot="title">订单优惠</text>
+            <text class=" text-bold " slot="desc">
+                <text class="text-price"></text>-3.00
+            </text>
+        </item>
+        <item  title="" desc="" icon=""   catchtap="" customClass="margin-top-sm">
+            <text class="  " slot="desc">
+                <text class="margin-right">共4件,实付款</text>
+                <text class="text-xxl text-bold text-red">
+                    <text class="text-price "></text>128.90
+                </text>
+            </text>
+        </item>
+
+
+
+
+        <item  title="" desc="" icon=""   catchtap="" customClass="margin-top-sm">
+            <text class="  " slot="desc">
+                <text class="margin-right">退款金额</text>
+                <text class="text-xxl text-bold ">
+                    <text class="text-price "></text>128.90
+                </text>
+            </text>
+        </item>
+            
+
+        <item  title="" desc="" icon=""  catchtap="" customClass="margin-top-xl">
+            <text class="text-xl" slot="title">退款流程</text>
+        </item>
+            
+        <view class="bg-white padding">
+            <view class="cu-steps">
+                <view class="cu-item {{index>refundStep?'':'text-red'}}" wx:for="{{refundStepList}}" wx:key>
+                <text class="num {{index==2?'err':''}}" data-index="{{index + 1}}"></text> {{item.name}}
+                </view>
+            </view>
+        </view>
+
+        <item  title="退款原因" titleClass="text-gray" customClass="margin-top" >
+            <text class="margin-left text-cut" slot="title">不想要了</text>
+        </item>
+        <item  title="申请时间" titleClass="text-gray" customClass="margin-top" >
+            <text class="margin-left text-cut" slot="title">2021-1-21 00:12:42</text>
+        </item>
+
+
+    </view>
+
+    <view class="pg-space-xxl"></view>
+    <view class="pg-space-xxl"></view>
+
+    <view class="cu-bar foot padding-lr  bg-white">
+
+            <view class="" >
+                <!-- <button class="cu-btn bg-gray text-gray  radius margin-right">核销</button> -->
+                <button class="cu-btn bg-gray text-gray  radius margin-right">申请退款</button>
+            </view>
+            <view class=" text-gray">
+                <button class="cu-btn bg-gray text-gray  radius">联系客服</button>
+            </view>
+    </view>
+</view>

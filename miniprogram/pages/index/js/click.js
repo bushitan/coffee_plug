@@ -9,8 +9,8 @@ module.exports = Behavior({
     ready() { 
         wx.navigateTo({
             // url: 'plugin://liteCupPlugin/productMenu',  // temp 页面
-            // url: 'plugin://liteCupPlugin/productDetail',  // detail 页面
-            url: 'plugin://liteCupPlugin/productConfirm',  // confirm确认 页面
+            // url: 'plugin://liteCupPlugin/productConfirm',  // confirm确认 页面
+            url: 'plugin://liteCupPlugin/orderDetail',  // 订单详情 页面
             
             // url: 'plugin://liteCupPlugin/temp',  // temp 页面
             // url : "plugin://liteCupPlugin/hello-page"

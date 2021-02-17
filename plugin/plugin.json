@@ -10,9 +10,9 @@
     "nav-custom":"components/nav/nav-custom/nav-custom",
     "nav-date":"components/nav/nav-date/nav-date",
 
-    "tabbar-top": "components/tabbar/tabbar-top/tabbar-top",
-    "tabbar-date": "components/tabbar/tabbar-date/tabbar-date",
-    "tabbar": "components/tabbar/tabbar/tabbar",
+    "bar": "components/bar/bar/bar",
+    "bar-date": "components/bar/bar-date/bar-date",
+    "tabbar": "components/bar/tabbar/tabbar",
 
     "card-image": "components/card/card-image/card-image",
 
@@ -38,8 +38,20 @@
   },
   "pages": {
     "productMenu": "pages/product/productMenu/productMenu",
-    "productDetail": "pages/product/productDetail/productDetail",
     "productConfirm": "pages/product/productConfirm/productConfirm",
+
+    "orderList": "pages/order/orderList/orderList",
+    "orderDetail": "pages/order/orderDetail/orderDetail",
+
+    "store": "pages/store/storeList/storeList",
+
+    "coupon": "pages/coupon/couponList/couponList",
+    
+    "gift": "pages/gift/giftList/giftList",
+    
+    "score": "pages/score/scoreList/scoreList",
+
+    
     "temp": "pages/product/temp/temp",
     "hello-page": "pages/hello-page/hello-page"
   },

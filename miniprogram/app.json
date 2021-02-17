@@ -21,8 +21,8 @@
         "nav-custom": "plugin://liteCupPlugin/nav-custom",
         "nav-date": "plugin://liteCupPlugin/nav-date",
 
-        "tabbar-top": "plugin://liteCupPlugin/tabbar-top",
-        "tabbar-date": "plugin://liteCupPlugin/tabbar-date",
+        "bar": "plugin://liteCupPlugin/bar",
+        "bar-date": "plugin://liteCupPlugin/bar-date",
         "tabbar": "plugin://liteCupPlugin/tabbar",
 
         "menu-phone": "plugin://liteCupPlugin/menu-phone",
