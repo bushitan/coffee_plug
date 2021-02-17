@@ -5,8 +5,8 @@
 
  
 
-    <include src="wxml/1_common.wxml" />
-    <!-- <include src="wxml/2_nav.wxml" /> -->
+    <!-- <include src="wxml/1_common.wxml" /> -->
+    <include src="wxml/2_nav.wxml" />
     <!-- <include src="wxml/3_bar.wxml" /> -->
     <!-- <include src="wxml/4_card.wxml" /> -->
     <!-- <include src="wxml/5_menu.wxml" /> -->

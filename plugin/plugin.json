@@ -32,11 +32,14 @@
 
     "coupon-node": "components/coupon/node/node",
 
-    "store-node": "components/store/node/node"
+    "store-node": "components/store/node/node",
+
+    "form-date": "components/form/form-date/form-date"
   },
   "pages": {
     "productMenu": "pages/product/productMenu/productMenu",
     "productDetail": "pages/product/productDetail/productDetail",
+    "productConfirm": "pages/product/productConfirm/productConfirm",
     "temp": "pages/product/temp/temp",
     "hello-page": "pages/hello-page/hello-page"
   },

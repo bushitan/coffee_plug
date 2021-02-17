@@ -29,12 +29,13 @@
               <view class=" text-gray" slot="desc">152771266781</view>
         </item>        
         </functional-page-navigator>
-        
+         
         <item  title="" desc="" icon="phone" isArrow="{{true}}"   
             customClass="margin-top" iconClass="text-xl margin-right-xs"> 
-              <view class="" slot="title">输入电话</view>
-              <input class=" text-gray" slot="desc"></input>
-        </item>      
+            <view class="" slot="title">输入                            电话</view>
+            <input class=" text-gray" slot="desc"  ></input>       
+        </item>     
+        
     </view>
 </view>
 

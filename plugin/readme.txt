@@ -49,6 +49,9 @@ components  插件目录
 ---- store-map 门店地图【小杯子的地图】
 
 
+-- form 常用的form表单
+-- form-date 选择【年度,月份,日期,时间】
+
 pages  组件目录
 -- product 产品相关
 ---- productMenu 自助点单，自助点单页面 √

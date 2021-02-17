@@ -22,11 +22,21 @@ month = month < 10 ? "0" + month : month
 const d = date.getDate()
 const t = date.getDate() + 1
 const _y = date.getDate() - 1
+
+var day = date.getDate()
+var hour = date.getHours()
+var minute = date.getMinutes()
+var second = date.getSeconds()
+
 var today = [year, month, d<10?"0"+d : d].join('-')
 var tomorrow = [year, month, t<10?"0"+t : t].join('-')
 var yesterday = [year, month, _y<10?"0"+_y : _y].join('-')
-var firstMonthDay = [year, month,"01"].join('-')
+var firstMonthDay = [year, month, "01"].join('-')
 var currentMonth = [year, month].join('-')
+var currentYear = year
+var currentHour = hour
+var currentMinute = [hour, minute].join(':')
+var currentSecond = [hour, minute, second].join(':')
 // console.log(today)
 
 // var getCurrentFirstMonthDay = date => {
@@ -75,8 +85,12 @@ module.exports = {
     today:today,
     tomorrow:tomorrow,
     yesterday:yesterday,
-    firstMonthDay:firstMonthDay,
-    currentMonth:currentMonth,
+    firstMonthDay: firstMonthDay,
+    currentMonth: currentMonth,
+    currentYear: currentYear,
+    currentHour: currentHour,
+    currentMinute: currentMinute,
+    currentSecond: currentSecond,
 
     getMonthFirstTime: getMonthFirstTime,
     getMonthLastTime: getMonthLastTime,

@@ -1,0 +1,128 @@
+<!--pages/test/test.wxml-->
+
+<!-- <product-address></product-address> -->
+<view class="padding-sm theme-yellow">
+    <view class=" text-df">
+        <view class="bg-white radius padding">
+            <view class="flex justify-around padding-bottom">
+                <button class="cu-btn radius margin-rigth  bg-red light " >到店自提</button>
+                <button class="cu-btn radius bg-grey light">同城配送</button>
+            </view>
+            
+            <item  title="" desc="" icon="location" isArrow="{{true}}"  catchtap="" 
+                customClass="" iconClass="text-xl margin-right-xs"> 
+                <view class="" slot="title">
+                    <view class="">自提地址</view>
+                    <view class="text-gray">广西那凝视</view>
+                </view>
+            </item>
+            <item  title="" desc="" icon="time" isArrow="{{true}}"  catchtap="openSelectTime" 
+                customClass="margin-top" iconClass="text-xl margin-right-xs"> 
+                <view class="" slot="title">
+                    <text class="margin-right-xs">自提时间</text>
+                </view>
+                 <view class=" text-gray" slot="desc">明天 08:30</view>
+            </item>
+            <functional-page-navigator
+                name="chooseAddress"
+                version="develop"
+                bind:success="onSuccess"
+                bind:fail="onFail"
+            >
+            <item  title="" desc="" icon="phone" isArrow="{{true}}"   
+                customClass="margin-top" iconClass="text-xl margin-right-xs"> 
+                <view class="" slot="title">预留电话</view>
+                <view class=" text-gray" slot="desc">152771266781</view>
+            </item>        
+            </functional-page-navigator>
+            
+            <item  title="" desc="" icon="phone" isArrow="{{true}}"   
+                customClass="margin-top" iconClass="text-xl margin-right-xs"> 
+                <view class="" slot="title">输入电话</view>
+                <input class=" text-gray text-right" slot="desc" placeholder="必填" placeholder-class="text-gray" ></input>   
+            </item>     
+            
+            <item  title="" desc="" icon="phone" isArrow="{{true}}"   
+                customClass="margin-top" iconClass="text-xl margin-right-xs"> 
+                <view class="" slot="title">备注信息</view>
+                <input class=" text-gray text-right" slot="desc" placeholder="选填" placeholder-class="text-gray" ></input>       
+            </item>     
+        </view>
+    </view>
+
+
+    <view class=" margin-top-sm text-black">
+        <view class="padding bg-white radius">
+            <view class="margin-top" wx:for="{{cartList}}">
+                <product-item
+                        name="{{item.name}}"
+                        image="{{item.cover}}"
+                        sku="{{item.skuDesc}}"
+                        price="{{item.price}}"
+                        count="{{item.Quantity}}"
+                        > 
+                            <!-- <text class="text-red tex-bold">
+                                <text class="text-price"></text>
+                                <text class="">{{item.price * item.Quantity}}</text>
+                            </text> -->
+                            <!-- <view class=" flex justify-between align-center text-xxl">
+                                <text class="cuIcon-roundleftfill-copy theme-text "   catchtap="cut" data-key="{{item.key}}"   ></text>
+                                <text class="padding-lr-xs text-xl ">{{ item.Quantity || 0 }}</text>								
+                                <text class="cuIcon-roundrightfill theme-text "  catchtap="add" data-key="{{item.key}}"  ></text>                        
+                            </view> -->
+                </product-item>
+            </view>
+
+            <item  title="" desc="" icon=""    customClass="margin-top" iconClass="text-xl margin-right-xs"> 
+                <view class="text-gray" slot="title">配送费</view>
+                <view class="" slot="desc">
+                    <text class="text-price">12</text>
+                </view>
+            </item>  
+            <item  title="" desc="" icon=""    customClass="margin-top" iconClass="text-xl margin-right-xs"> 
+                <view class="text-gray" slot="title">微信支付优惠券</view>
+                <view class=" text-gray" slot="desc">微信支付环节自动计算</view>
+            </item>  
+
+            <view class="solid-bottom padding-top-xl"></view>
+            <item  title="" desc="" icon=""  catchtap="" customClass="margin-top-xl">
+                <text class=" text-gray" slot="title">商品总价</text>
+                <text class=" text-bold text-price" slot="desc">38.00</text>
+            </item>
+            <item  title="" desc="" icon=""   catchtap="" customClass="margin-top-sm">
+                <text class=" text-gray" slot="title">订单运费</text>
+                <text class=" text-bold text-price" slot="desc">0.00</text>
+            </item>
+            <item  title="" desc="" icon=""   catchtap="" customClass="margin-top-sm">
+                <text class=" text-gray" slot="title">订单优惠</text>
+                <text class=" text-bold " slot="desc">
+                    <text class="text-price"></text>-3.00
+                </text>
+            </item>
+            <item  title="" desc="" icon=""   catchtap="" customClass="margin-top-sm">
+                <text class="  " slot="desc">
+                    <text class="margin-right">共4件,实付款</text>
+                    <text class="text-xxl text-bold text-red">
+                        <text class="text-price "></text>128.90
+                    </text>
+                </text>
+            </item>
+        </view>
+    </view>
+
+
+</view>
+<view class="pg-space-xxl"></view>
+<view class="cu-bar foot padding-lr  bg-white">
+
+    <!-- <item  title="" desc="" icon=""    customClass="margin-top" iconClass="text-xl ">  -->
+        <view class="" >
+            <text class="text-gray margin-right-sm">共5件,合计</text>
+            <text class="text-red text-bold text-xxl text-price">129</text>
+        </view>
+        <view class=" text-gray">
+            <button class="cu-btn bg-red text-white radius">微信支付</button>
+        </view>
+    <!-- </item>   -->
+</view>
+<form-date title="送达时间" bind:confirm="selectTimeConfirm" show="{{showSelectTime}}"></form-date>

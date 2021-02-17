@@ -67,13 +67,17 @@ Component({
         },
 
         hideModal(){
-            if (this.data.isTouchClose)
-                this.setData({show:false})
+            if (this.data.isTouchClose) {
+                this.setData({ show: false })
+                this.triggerEvent('cancel', "")
+            }
         },
 
         clickConfirm(){
-            this.hideModal()
-            this.triggerEvent('success', "abc")
+            // this.hideModal()
+            this.setData({ show: false })
+            this.triggerEvent('success', "")
+            this.triggerEvent('confirm', "")
         },
 
     }

@@ -1,10 +1,11 @@
 // pages_manager/seller/seller.js
-// var app = getApp() 
+// var app = getApp()  
 Component({
 
     properties: {
     },
     data: { 
+        showSelectTime:false,
         list: [
         ],
         cartList: [
@@ -122,7 +123,13 @@ Component({
         },
 
 
+        openSelectTime(){
+            this.setData({ showSelectTime:true,})
+        },
 
+        selectTimeConfirm(e){
+            console.log(e.detail)
+        }
 
         // 基础的分享页面功能
         // onShareAppMessage(res) {

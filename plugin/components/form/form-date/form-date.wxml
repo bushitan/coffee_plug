@@ -1,0 +1,56 @@
+<!--components/bar/bar.wxml-->
+
+
+    
+<dialog show="{{show}}" 
+title="{{title}}"  
+textConfirm="确定"  
+showBottom="{{false}}"
+isTouchClose="{{true}}"> 
+    <view slot="content" class="bg-white">
+        <form bindsubmit="getQuery" class="padding" >
+        
+            <picker mode="date" fields="year" value="{{currentYear}}" name="year" bindchange="startDateEvent" >
+                <view class="cu-bar bg-white search  padding-lr text-sm">
+                    <view>年份</view>          
+                        <text class="">
+                            <text>{{currentYear}}</text><text class="cuIcon-unfold "></text>
+                        </text>
+                </view>
+            </picker>
+            
+            <picker mode="date" fields="month" value="{{currentMonth}}" name="month" bindchange="startDateEvent" >
+                <view class="cu-bar bg-white search  padding-lr text-sm">
+                    <view>月份</view>          
+                        <text class="">
+                            <text>{{currentMonth}}</text><text class="cuIcon-unfold "></text>
+                        </text>
+                </view>
+            </picker>
+
+            <picker mode="date" fields="day" value="{{today}}" name="day" bindchange="startDateEvent" >
+                <view class="cu-bar bg-white search  padding-lr text-sm">
+                    <view>日期</view>          
+                        <text class="">
+                            <text>{{today}}</text><text class="cuIcon-unfold "></text>
+                        </text>
+                </view>
+            </picker>
+            
+            <picker mode="time"  value="{{currentMinute}}" name="time"  bindchange="endDateEvent" >
+                <view class="cu-bar bg-white search  padding-lr text-sm">
+                    <view>时间</view>           
+                    <text class="">
+                        <text>{{currentMinute}}</text><text class="cuIcon-unfold "></text>
+                    </text>
+                </view>
+            </picker>  
+
+            <view class="flex justify-end padding-lr">
+                <button class="cu-btn bg-gray light margin-right" catchtap="cancel">取消</button> 
+                <button class="cu-btn bg-red light" catchtap="confirm">确认</button> 
+            </view>
+        </form>    
+    </view>
+    
+</dialog>
