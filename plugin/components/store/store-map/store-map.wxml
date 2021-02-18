@@ -2,15 +2,31 @@
 
 
 
-<view wx:for="{{list}}" class="margin-top bg-white  radius padding">
-   <order-customer-item
-        
-        orderId="213213"
-        status="待付款"
-        statusCode="4"
-        order="{{item.order}}"
-        count="4"
-        price="128.00"
-        createTime="2021-1-4 21:24:02"
-   ></order-customer-item>
+
+
+<view class=" " >
+    <view class=" pg-radius  shadow shadow-warp bg-white text-black ">
+        <view class=" padding-lr " catchtap="toEditor">
+            <view class="  text-sm  text-gray margin-top-sm solid-bottom padding-bottom-xs " >
+                <text class="cuIcon-title text-yellow "></text>
+                <text class="">小杯子探店地图 | SeekingCoffee</text>
+            </view>
+        </view>
+         
+        <view class="padding-lr flex justify-center margin-top-sm margin-bottom" >
+            <map 
+                id="map" 
+                longitude="{{poiLongitude}}" 
+                latitude="{{poiLatitude}}" 
+                scale="14"                         
+                show-compass="{{true}}"
+                show-scale="{{true}}"
+                markers="{{poiMarkers}}"
+                bindmarkertap="poiMarkerTap" 
+                polyline="{{polyline}}" 
+                show-location style="width: 100%; height: 30vh;"
+                show-scale="{{true}}"
+            ></map>
+        </view>
+    </view>
 </view>

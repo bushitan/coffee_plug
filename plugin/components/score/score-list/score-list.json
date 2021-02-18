@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {        
+        "score-item": "../../components/score/score-item/score-item"
+    }
+}

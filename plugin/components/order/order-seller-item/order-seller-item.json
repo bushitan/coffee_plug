@@ -1,7 +1,6 @@
 {
     "component": true,
-    "usingComponents": {        
-        "product-cart": "../../../components/product/product-cart/product-cart",        
+    "usingComponents": {               
         "item": "../../../components/common/item/item"
     }
 }

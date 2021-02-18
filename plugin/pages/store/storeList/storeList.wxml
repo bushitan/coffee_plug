@@ -1,12 +1,17 @@
 
-<view class=" padding-sm text-black">
-    <view class="">
-    
-        <!-- <view class="margin-bottom"> -->
+<view class="theme-yellow">
+    <view>
+        <store-map></store-map>
+    </view>
+    <view class=" padding-sm text-black">
+        <view class="">
+        
+            <!-- <view class="margin-bottom"> -->
+                
+                <store-list list="{{list}}"  ></store-list>
+            <!-- </view> -->
             
-            <store-list list="{{list}}"  ></store-list>
-        <!-- </view> -->
+        </view>
         
     </view>
-    
 </view>

@@ -1,0 +1,11 @@
+
+
+<view class="margin-top" wx:for="{{list}}"  catchtap="clickCoupon" >
+    <coupon-item 
+        name="{{item.name}}"
+        desc="{{item.desc}}"
+        startTime="{{item.startTime}}"
+        endTime="{{item.endTime}}"
+        discount="{{item.discount}}"
+    ></coupon-item>
+</view>

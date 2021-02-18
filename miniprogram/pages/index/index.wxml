@@ -11,7 +11,7 @@
     <!-- <include src="wxml/4_card.wxml" /> -->
     <!-- <include src="wxml/5_menu.wxml" /> -->
     <!-- <include src="wxml/6_product.wxml" /> -->
-    <include src="wxml/7_order.wxml" />
+    <!-- <include src="wxml/7_order.wxml" /> -->
     <!-- <include src="wxml/8_coupon.wxml" /> -->
     <!-- <include src="wxml/9_store.wxml" /> -->
 

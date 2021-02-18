@@ -1,0 +1,19 @@
+<!--components/bar/bar.wxml-->
+ 
+<view class=" flex-sub  radius product" style="overflow: hidden;">
+    <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg"
+        mode="aspectFill" class="gif-black response block" style="height:325rpx"></image>            
+    <view class="padding-sm">            
+        <view class="text-df">XX赠送的礼物</view>
+        <view class="flex justify-between">
+            <view>
+                <text class="text-price text-red text-bold text-xl"></text>
+                <text class="text-red text-bold text-xxl margin-right-xs">9元</text> 
+            </view>
+            <view>
+                <button class="cu-btn bg-red light margin-right">购买</button>
+                <button class="cu-btn bg-green light">赠送</button>
+            </view>
+        </view> 
+    </view>
+</view>

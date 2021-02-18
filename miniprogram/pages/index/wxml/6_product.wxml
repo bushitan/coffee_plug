@@ -27,7 +27,7 @@
 <dialog show="{{showDialog}}" title="购物车"  textConfirm="确定"  showCancel="{{false}}" showTop="{{!false}}" showBottom="{{!false}}"> 
 
     <button  slot="top" class="cu-btn bg-red round " catchtap="clear">清空</button>
-    <product-cart slot="content" order="{{menuCart}}"  show="{{!cartShow}}" ></product-cart>
+    <product-list slot="content" order="{{menuCart}}"  show="{{!cartShow}}" ></product-list>
 </dialog>
 
 <product-bar order="{{menuCart}}" bind:pay="menuToPay"  bind:cart="menuOpenCart" >

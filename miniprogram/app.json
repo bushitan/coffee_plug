@@ -30,7 +30,7 @@
 
         "product-detail": "plugin://liteCupPlugin/product-detail",
         "product-sku": "plugin://liteCupPlugin/product-sku",
-        "product-cart": "plugin://liteCupPlugin/product-cart",
+        "product-list": "plugin://liteCupPlugin/product-list",
         "product-bar": "plugin://liteCupPlugin/product-bar",
 
         "order-mall": "plugin://liteCupPlugin/order-mall",
@@ -42,7 +42,7 @@
         "order-customer-item": "plugin://liteCupPlugin/order-customer-item",
         "order-customer-list": "plugin://liteCupPlugin/order-customer-list",
 
-        "coupon-node": "plugin://liteCupPlugin/coupon-node",
+        "coupon-item": "plugin://liteCupPlugin/coupon-item",
         "card-image": "plugin://liteCupPlugin/card-image",
         "common-swiper": "plugin://liteCupPlugin/swiper",
 

@@ -12,5 +12,11 @@
         count="4"
         price="128.00"
         createTime="2021-1-4 21:24:02"
-   ></order-customer-item>
+   >
+
+        <product-list
+            order="{{item.order}}"   
+        ></product-list>
+   </order-customer-item>
 </view>
+

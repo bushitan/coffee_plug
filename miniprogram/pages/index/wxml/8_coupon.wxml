@@ -2,11 +2,11 @@
 <!-- 代金券 -->
 
 <view class="margin-top" wx:for="{{couponList}}"  catchtap="clickCoupon" >
-    <coupon-node 
+    <coupon-item 
         name="{{item.name}}"
         desc="{{item.desc}}"
         startTime="{{item.startTime}}"
         endTime="{{item.endTime}}"
         discount="{{item.discount}}"
-    ></coupon-node>
+    ></coupon-item>
 </view>

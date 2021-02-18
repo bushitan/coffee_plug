@@ -1,15 +1,11 @@
 
 
 
- <item  title="" desc="" icon=""  catchtap="" customClass="margin-bottom">
+<item  title="" desc="" icon=""  catchtap="" customClass="margin-bottom">
     <text class="" slot="title">订单编号：{{orderId}}</text>
     <text class="text-red" slot="desc">{{status}}</text>
-</item>
-
-<product-cart  
-    order="{{order}}"   
-></product-cart>
-
+</item> 
+<slot/>
 <item  title="" desc="" icon=""   catchtap="" customClass="margin-top-sm">
     <text class="  " slot="desc">
         <text class="margin-right">共{{count}}件,合计</text>

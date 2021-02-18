@@ -85,17 +85,7 @@ Component({
                         "name": "澳白（8 OZ）",
                         "price": 25
                     },
-                    {
-                        "key": "0_3_0_1_1_0_",
-                        "categoryIndex": "0",
-                        "productIndex": "3",
-                        "ProductId": 174,
-                        "Quantity": 1,
-                        "skuDesc": "规格【大杯】，甜度【正常】",
-                        "cover": "https://wm.51zfgx.com/images/thumbs/0001251_-12-oz.jpeg",
-                        "name": "热 伊丽莎白 招牌特调（12 OZ）",
-                        "price": 32
-                    },
+                    
                     {
                         "key": "0_3_0_0_1_0_",
                         "categoryIndex": "0",

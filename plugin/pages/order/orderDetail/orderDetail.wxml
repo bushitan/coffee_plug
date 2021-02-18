@@ -34,25 +34,9 @@
         </item>
 
 
-        <view class="margin-top-xl" wx:for="{{cartList}}">
-            <product-item
-                    name="{{item.name}}"
-                    image="{{item.cover}}"
-                    sku="{{item.skuDesc}}"
-                    price="{{item.price}}"
-                    count="{{item.Quantity}}"
-                    > 
-                        <!-- <text class="text-red tex-bold">
-                            <text class="text-price"></text>
-                            <text class="">{{item.price * item.Quantity}}</text>
-                        </text> -->
-                        <!-- <view class=" flex justify-between align-center text-xxl">
-                            <text class="cuIcon-roundleftfill-copy theme-text "   catchtap="cut" data-key="{{item.key}}"   ></text>
-                            <text class="padding-lr-xs text-xl ">{{ item.Quantity || 0 }}</text>								
-                            <text class="cuIcon-roundrightfill theme-text "  catchtap="add" data-key="{{item.key}}"  ></text>                        
-                        </view> -->
-            </product-item>
-        </view>
+        <product-list
+            order="{{obj.orde}}"   
+        ></product-list>
         <view class="solid-bottom padding-top-xl"></view>
         <item  title="" desc="" icon=""  catchtap="" customClass="margin-top-xl">
             <text class=" text-gray" slot="title">商品总价</text>

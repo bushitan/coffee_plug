@@ -9,11 +9,15 @@ module.exports = Behavior({
     ready() { 
         wx.navigateTo({
             // url: 'plugin://liteCupPlugin/productMenu',  // temp 页面
-            // url: 'plugin://liteCupPlugin/productConfirm',  // confirm确认 页面
+            url: 'plugin://liteCupPlugin/productConfirm',  // confirm确认 页面
+
             // url: 'plugin://liteCupPlugin/orderList',  // 订单列表 页面
             // url: 'plugin://liteCupPlugin/orderDetail',  // 订单详情 页面
-            
-            url: 'plugin://liteCupPlugin/storeList',  // 订单列表 页面
+
+            // url: 'plugin://liteCupPlugin/storeList',  // 订单列表 页面
+            // url: 'plugin://liteCupPlugin/couponList',  // 优惠券列表 页面
+            // url: 'plugin://liteCupPlugin/giftList',  // 礼物列表 页面
+            // url: 'plugin://liteCupPlugin/scoreList',  // 积分列表 页面
 
             // url: 'plugin://liteCupPlugin/temp',  // temp 页面
             // url : "plugin://liteCupPlugin/hello-page"

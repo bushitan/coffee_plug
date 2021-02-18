@@ -1,31 +1,30 @@
 <!--components/bar/bar.wxml-->
 
 
-<view class="cu-list menu">
-    <view class="cu-item " >
-        <view class="content padding-tb-sm">
-            <view class="">
-                <text class="text-bold margin-right-xs">{{name}}</text>
-                <text class="text-bold cu-tag sm  text-red" style="background-color: rgba(204, 69, 59, 0.2)" wx:if="{{isNear}}">距离最近</text>
-            </view>
-            <view class="text-gray text-sm flex">
-                <text class="text-cut">
-                    <text class=" text-gray  margin-right-xs">{{address}}</text> 
-                </text>
-            </view>
-            <view class=" text-sm">
-                <text class="text-gray margin-right">{{status}}</text>
-                <text class="text-gray" >{{startTime}}-{{endTime}}</text>
-            </view>
+<view class="flex justify-between  align-start {{customClass}}" bindtap="click">
+    <view class="">
+        <view class="flex align-center">        
+            <text class="text-bold text-xl margin-right-xs">{{name}}</text>
+            <text class="text-bold cu-tag sm  text-red" style="background-color: rgba(204, 69, 59, 0.2)" wx:if="{{isNear}}">距离最近</text>
+        </view> 
+        <view class="margin-top-sm text-sm">
+            <text class="text-cut">
+                <text class=" text-gray  margin-right-xs">{{address}}</text> 
+            </text>
+        </view>        
+        <view class="margin-top-xs text-sm">
+            <text class="text-gray margin-right">{{status}}</text>
+            <text class="text-gray" >{{startTime}}-{{endTime}}</text>
         </view>
-        <view class=" text-xxl">                    
-            <view class=" text-right">                        
-                <text class="cuIcon-phone theme-text margin-right"  wx:if="{{phone}}"></text>
-                <text class="cuIcon-location theme-text" wx:if="{{longitude}}"></text>
-            </view>    
-            <view class=" padding-top">
-                <slot/>
-            </view>
-        </view>
+    </view>           
+    <view class=" ">
+        <view class=" text-xxl text-right">                        
+            <text class="cuIcon-phone theme-text margin-right"  wx:if="{{phone}}"></text>
+            <text class="cuIcon-location theme-text"  ></text>
+        </view> 
+        <view class=" padding-top">
+            <slot/>
+        </view> 
     </view>
 </view>
+

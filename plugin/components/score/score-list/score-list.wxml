@@ -1,0 +1,11 @@
+
+
+<view class="margin-top margin-lr-sm bg-white" wx:for="{{list}}"  catchtap="clickCoupon" >
+    <score-item 
+        name="{{item.name}}"
+        desc="{{item.desc}}"
+        startTime="{{item.startTime}}"
+        endTime="{{item.endTime}}"
+        discount="{{item.discount}}"
+    ></score-item>
+</view>

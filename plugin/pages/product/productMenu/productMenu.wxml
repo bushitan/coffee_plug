@@ -47,12 +47,12 @@
     isTouchClose="{{true}}"> 
         <button  slot="top" class="cu-btn bg-red round " catchtap="clearCart">清空</button>
         <view class="bg-white padding" slot="content" >
-            <product-cart show="{{!cartShow}}"
+            <product-list show="{{!cartShow}}"
                 order="{{cartList}}"   
                 isOperate="{{true}}"
                 bind:add="add"  
                 bind:cut="cut" 
-            ></product-cart>
+            ></product-list>
         </view>
     </dialog>
 

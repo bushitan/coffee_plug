@@ -45,6 +45,7 @@ Component({
     //   Custom: app.globalData.Custom
   },
   ready(){
+      var that = this
       wx.getSystemInfo({
           success: e => {
               var StatusBar, CustomBar, Custom

@@ -11,7 +11,8 @@
             
             <order-customer-list list="{{orderList}}"  ></order-customer-list>
         <!-- </view> -->
-        
+    
+
     </view>
     
 </view>

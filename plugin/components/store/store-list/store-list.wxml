@@ -2,18 +2,17 @@
 
 
 <view wx:for="{{list}}" class="margin-top bg-white  radius padding">
-   <store-item
-        
-
-
+   <store-item 
         name="{{item.name}}"
         address="{{item.address}}"
         status="{{item.status}}"
         startTime="{{item.startTime}}"
         endTime="{{item.endTime}}"
-        phone="{{item.phone}}"
-
-   ></store-item>
+        phone="{{item.phone}}" 
+        isNear="{{true}}"
+   >
+        <button class="cu-btn radius theme-bg text-white shadow-blur" catchtap="">去门店</button>
+   </store-item>
 </view>
 
 

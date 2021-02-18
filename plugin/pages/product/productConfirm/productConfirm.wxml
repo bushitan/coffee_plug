@@ -53,25 +53,9 @@
 
     <view class=" margin-top-sm text-black">
         <view class="padding bg-white radius">
-            <view class="margin-top" wx:for="{{cartList}}">
-                <product-item
-                        name="{{item.name}}"
-                        image="{{item.cover}}"
-                        sku="{{item.skuDesc}}"
-                        price="{{item.price}}"
-                        count="{{item.Quantity}}"
-                        > 
-                            <!-- <text class="text-red tex-bold">
-                                <text class="text-price"></text>
-                                <text class="">{{item.price * item.Quantity}}</text>
-                            </text> -->
-                            <!-- <view class=" flex justify-between align-center text-xxl">
-                                <text class="cuIcon-roundleftfill-copy theme-text "   catchtap="cut" data-key="{{item.key}}"   ></text>
-                                <text class="padding-lr-xs text-xl ">{{ item.Quantity || 0 }}</text>								
-                                <text class="cuIcon-roundrightfill theme-text "  catchtap="add" data-key="{{item.key}}"  ></text>                        
-                            </view> -->
-                </product-item>
-            </view>
+            <product-list
+                order="{{cartList}}"   
+            ></product-list>
 
             <item  title="" desc="" icon=""    customClass="margin-top" iconClass="text-xl margin-right-xs"> 
                 <view class="text-gray" slot="title">配送费</view>

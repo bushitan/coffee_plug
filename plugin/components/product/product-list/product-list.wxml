@@ -1,0 +1,83 @@
+
+
+<view class="">
+    <view class="{{ index < order.length-1 ? 'padding-bottom-sm':''}}" wx:for="{{order}}" wx:key="*this"  >
+        <!-- {{ index }} {{order.length-2}}  {{index < order.length-2}} -->
+        <product-item
+        name="{{item.name}}"
+        image="{{item.cover}}"
+        sku="{{item.skuDesc}}"
+        price="{{item.price}}"
+        > 
+            <view class=" flex justify-between align-center text-xxl" wx:if="{{isOperate}}">
+                <text class="cuIcon-roundleftfill-copy theme-text "   catchtap="cut" data-key="{{item.key}}"   ></text>
+                <text class="padding-lr-xs text-xl ">{{ item.Quantity || 0 }}</text>								
+                <text class="cuIcon-roundrightfill theme-text "  catchtap="add" data-key="{{item.key}}"  ></text>                        
+            </view>
+            <text class="text-gray text-sm margin-top-xs  text-right" wx:else>x{{item.Quantity}}</text>
+        </product-item>
+    </view>					
+</view>           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <view class="padding-lr  text-left margin-top">
+    <text class="line-red text-bold">{{shopDiscount}}</text>
+</view> -->
+<!-- <view class=" padding-tb-sm">
+    <view class="flex align-start  padding-lr margin-tb-sm" wx:for="{{order}}" wx:key="*this" wx:for-item="item" wx:for-index="key">
+        <view class="action">
+            <image src='{{item.cover}}' class="cu-avatar radius xl  bg-gray margin-right-sm " mode="aspectFill"></image>
+        </view>
+        <view class="" style="width:100%">
+            <view class="text-black text-left">{{item.name}}</view>
+            <view class="flex justify-between">
+                <view class="text-gray ">
+                    <view class="text-gray  text-sm " >
+                        <text decode="{{true}}"  space="{{true}}"> {{item.skuDesc}}</text>
+                    </view>
+                    <view class="flex ">
+                        <text class="text-red text-price"></text>
+                        <text class="text-red">{{item.price}}</text>
+                    </view>
+                </view>
+                <view class=" flex justify-between align-center text-xxl">
+                    <text class="cuIcon-roundleftfill-copy theme-text "   catchtap="cut" data-key="{{item.key}}"   ></text>
+                    <text class="padding-lr-xs text-xl ">{{ item.Quantity || 0 }}</text>								
+                    <text class="cuIcon-roundrightfill theme-text "  catchtap="add" data-key="{{item.key}}"  ></text>                        
+                </view>
+            </view>
+        </view>
+
+    </view>					
+</view>            -->
+<!-- 
+<view  wx:for="{{order}}" wx:key  wx:for-item="item" wx:for-index="key">
+    <item-image  
+        image="{{item.cover}}"
+        title="{{item.name}}{{item.name}}" 
+        summary="{{item.skuDesc}}" desc="" isIcon="{{true}}"  catchtap="clickItem" customClass="bg-white text-xl padding">
+        <view class="flex " slot="summary">
+            <text class="text-red text-price"></text>
+            <text class="text-red">{{item.price}}</text>
+        </view>
+        <view class=" flex justify-between align-center text-xxl" slot="desc">
+            <text class="cuIcon-roundleftfill-copy theme-text "   catchtap="cut" data-key="{{item.key}}"   ></text>
+            <text class="padding-lr-xs text-xl ">{{ item.Quantity || 0 }}</text>								
+            <text class="cuIcon-roundrightfill theme-text "  catchtap="add" data-key="{{item.key}}"  ></text>                        
+        </view>
+    </item-image>
+</view>  -->
