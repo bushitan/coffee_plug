@@ -17,6 +17,9 @@ Component({
         show: { type: Boolean, value: false }, //是否展示
         // size: { type: String, value: "sm" }, 
         isMirror: { type: Boolean, value: false }, // 是否镜像
+
+        isOperate: { type: Boolean, value: false }, // 是否做add和cut操作
+        isFold: { type: Boolean, value: false }, // 是否折叠
     }, 
     options: { styleIsolation: 'apply-shared'},
     // 监听器

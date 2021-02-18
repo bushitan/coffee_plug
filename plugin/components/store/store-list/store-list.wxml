@@ -1,0 +1,29 @@
+
+
+
+<view wx:for="{{list}}" class="margin-top bg-white  radius padding">
+   <store-item
+        
+
+
+        name="{{item.name}}"
+        address="{{item.address}}"
+        status="{{item.status}}"
+        startTime="{{item.startTime}}"
+        endTime="{{item.endTime}}"
+        phone="{{item.phone}}"
+
+   ></store-item>
+</view>
+
+
+<!-- isNear: { type: Boolean,value:false, },
+       
+       name: { type: String },
+       address: { type: String },
+       status: { type: String },
+       startTime: { type: String },
+       endTime: { type: String },
+       phone: { type: String },
+       longitude: { type: Number },
+       latitude: { type: Number }, -->

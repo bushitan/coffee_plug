@@ -37,13 +37,19 @@
         "order-number": "plugin://liteCupPlugin/order-number",
         "order-customer": "plugin://liteCupPlugin/order-customer",
         "order-detail": "plugin://liteCupPlugin/order-detail",
-
+        "order-seller-item": "plugin://liteCupPlugin/order-seller-item",
+        "order-seller-list": "plugin://liteCupPlugin/order-seller-list",
+        "order-customer-item": "plugin://liteCupPlugin/order-customer-item",
+        "order-customer-list": "plugin://liteCupPlugin/order-customer-list",
 
         "coupon-node": "plugin://liteCupPlugin/coupon-node",
         "card-image": "plugin://liteCupPlugin/card-image",
         "common-swiper": "plugin://liteCupPlugin/swiper",
 
-        "store-node": "plugin://liteCupPlugin/store-node"
+        "store-node": "plugin://liteCupPlugin/store-node",
+        "store-item": "plugin://liteCupPlugin/store-item",
+        "store-list": "plugin://liteCupPlugin/store-list",
+        "store-map": "plugin://liteCupPlugin/store-map"
     },
 
     "sitemapLocation": "sitemap.json"

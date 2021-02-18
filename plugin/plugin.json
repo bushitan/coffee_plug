@@ -29,10 +29,18 @@
     "order-number": "components/order/order-number/order-number",
     "order-customer":"components/order/order-customer/order-customer",
     "order-detail":"components/order/order-detail/order-detail",
+    
+    "order-seller-item":"components/order/order-seller-item/order-seller-item",
+    "order-seller-list":"components/order/order-seller-list/order-seller-list",
+    "order-customer-item":"components/order/order-customer-item/order-customer-item",
+    "order-customer-list":"components/order/order-customer-list/order-customer-list",
 
     "coupon-node": "components/coupon/node/node",
 
     "store-node": "components/store/node/node",
+    "store-item": "components/store/store-item/store-item",
+    "store-list": "components/store/store-list/store-list",
+    "store-map": "components/store/store-map/store-map",
 
     "form-date": "components/form/form-date/form-date"
   },
@@ -43,13 +51,13 @@
     "orderList": "pages/order/orderList/orderList",
     "orderDetail": "pages/order/orderDetail/orderDetail",
 
-    "store": "pages/store/storeList/storeList",
+    "storeList": "pages/store/storeList/storeList",
 
-    "coupon": "pages/coupon/couponList/couponList",
+    "couponList": "pages/coupon/couponList/couponList",
     
-    "gift": "pages/gift/giftList/giftList",
+    "giftList": "pages/gift/giftList/giftList",
     
-    "score": "pages/score/scoreList/scoreList",
+    "scoreList": "pages/score/scoreList/scoreList",
 
     
     "temp": "pages/product/temp/temp",

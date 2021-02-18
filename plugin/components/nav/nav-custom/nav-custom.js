@@ -28,10 +28,10 @@ Component({
       default: ''
     },
 
-      TopCustomBar: {
-          type: String,
-          default: '0'
-      },
+    TopCustomBar: {
+        type: String,
+        default: '0'
+    },
   },
   /**
    * 组件的初始数据

@@ -1,6 +1,10 @@
 {
     "usingComponents": {
+        "bar": "../../../components/bar/bar/bar",
+        
+        "order-customer-list":"../../../components/order/order-customer-list/order-customer-list",
         "product-item": "../../../components/product/product-item/product-item",
+        "product-cart": "../../../components/product/product-cart/product-cart",
         "item": "../../../components/common/item/item"
     }
 }

@@ -1,0 +1,16 @@
+
+
+
+
+<view wx:for="{{list}}" class="margin-top bg-white  radius padding">
+   <order-customer-item
+        
+        orderId="213213"
+        status="待付款"
+        statusCode="4"
+        order="{{item.order}}"
+        count="4"
+        price="128.00"
+        createTime="2021-1-4 21:24:02"
+   ></order-customer-item>
+</view>

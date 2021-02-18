@@ -1,19 +1,20 @@
 
 
-<view class=" padding-lr">
-    <view class="padding-top" wx:for="{{order}}" wx:key="*this" wx:for-item="item" wx:for-index="key">
+<view class="">
+    <view class="{{ index < order.length-1 ? 'padding-bottom-sm':''}}" wx:for="{{order}}" wx:key="*this"  >
+        <!-- {{ index }} {{order.length-2}}  {{index < order.length-2}} -->
         <product-item
         name="{{item.name}}"
         image="{{item.cover}}"
         sku="{{item.skuDesc}}"
         price="{{item.price}}"
-        count=""
         > 
-            <view class=" flex justify-between align-center text-xxl">
+            <view class=" flex justify-between align-center text-xxl" wx:if="{{isOperate}}">
                 <text class="cuIcon-roundleftfill-copy theme-text "   catchtap="cut" data-key="{{item.key}}"   ></text>
                 <text class="padding-lr-xs text-xl ">{{ item.Quantity || 0 }}</text>								
                 <text class="cuIcon-roundrightfill theme-text "  catchtap="add" data-key="{{item.key}}"  ></text>                        
             </view>
+            <text class="text-gray text-sm margin-top-xs  text-right" wx:else>x{{item.Quantity}}</text>
         </product-item>
     </view>					
 </view>           

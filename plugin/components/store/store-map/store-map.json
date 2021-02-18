@@ -1,0 +1,6 @@
+{
+    "component": true,
+    "usingComponents": {        
+        "order-customer-item": "../../components/order/order-customer-item/order-customer-item"
+    }
+}

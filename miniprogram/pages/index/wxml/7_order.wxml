@@ -15,4 +15,8 @@
 </view> -->
 
 
-<order-detail order="{{orderMallList[0]}}"></order-detail>
+<!-- <order-detail order="{{orderMallList[0]}}"></order-detail> -->
+
+
+
+<order-seller-item order="{{menuCart}}"></order-seller-item>

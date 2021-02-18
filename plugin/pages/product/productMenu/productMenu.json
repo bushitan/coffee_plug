@@ -6,9 +6,9 @@
         "dialog": "../../../components/common/dialog/dialog",
         "common-swiper": "../../../components/common/swiper/swiper",
         "menu-phone": "../../../components/menu/menu-phone/menu-phone",
-        "product-detail": "./../../components/product/product-detail/product-detail",
-        "product-sku": "./../../components/product/product-sku/product-sku",
-        "product-cart": "./../../components/product/product-cart/product-cart",
-        "product-bar": "./../../components/product/product-bar/product-bar"
+        "product-detail": "../../../components/product/product-detail/product-detail",
+        "product-sku": "../../../components/product/product-sku/product-sku",
+        "product-cart": "../../../components/product/product-cart/product-cart",
+        "product-bar": "../../../components/product/product-bar/product-bar"
     }
 }

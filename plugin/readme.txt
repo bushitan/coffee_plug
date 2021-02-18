@@ -31,26 +31,33 @@ components  插件目录
 ---- product-cart 购物车，已选产品 【加减数据按钮，返回inde，由页面操作】√
 ---- product-bar 菜单底部操作栏目【打开购物车，当前金额，去下单】√
 ---- product-item 订单的节点【提供购物车和订单详情使用】√
----- product-address 订单的节点【提供购物车和订单详情使用】√
+---- product-list 产品列表【仅仅展示产品以及价格。】 
 
 -- order 订单
----- order-detail 订单详情【仅仅展示数据，不含退款、扫码操作】√
----- order-customer  用户查看订单的原子节点【仅仅做数据展示】√
----- order-mall 商城订单的原子节点【仅仅做数据展示】√
----- order-scan 扫码订单的原子节点【仅仅做数据展示】√
+---- order-detail 订单详情【仅仅展示数据，不含退款、扫码操作】√  取消
+---- order-customer  用户查看订单的原子节点【仅仅做数据展示】√  取消
+---- order-mall 商城订单的原子节点【仅仅做数据展示】√     取消
+---- order-scan 扫码订单的原子节点【仅仅做数据展示】√    取消
+
+---- order-customer-item 顾客订单节点√   
+---- order-customer-list  顾客订单列表√   
+---- order-seller-item 商户订单节点√   
+---- order-seller-list  商户订单列表√   
 
 -- coupon 优惠券
 ---- coupon-detail 订单详情【仅仅展示优惠券的详细信息】 ×
 ---- coupon-node 优惠券的原子节点【仅仅做数据展示】 √
+---- coupon-item 优惠券的原子节点【仅仅做数据展示】 √
+---- coupon-list 优惠券列表【仅仅做数据展示】 √
 
 -- store 门店
----- store-detail 订单详情【仅仅展示数据，拨打电话，导航，不含点击门店后的行为】 ×
----- store-node 门店的的原子节点【仅仅做数据展示】√
+---- store-list 订单详情【仅仅展示数据，拨打电话，导航，不含点击门店后的行为】 ×
+---- store-item 门店的的原子节点【仅仅做数据展示】√
 ---- store-map 门店地图【小杯子的地图】
 
 
 -- form 常用的form表单
--- form-date 选择【年度,月份,日期,时间】
+---- form-date 选择【年度,月份,日期,时间】 √
 
 pages  组件目录
 -- product 产品相关
@@ -58,7 +65,7 @@ pages  组件目录
 ---- productConfirm 订单确认 √
 
 -- order 订单
----- orderList 订单列表
+---- orderList 订单列表√
 ---- orderDetail 订单详情 √
 
 --store

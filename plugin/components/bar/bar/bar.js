@@ -1,5 +1,12 @@
 // components/bar/bar.js
-// var app = getApp()
+/**
+ 
+<bar list="{{tabMatrix[0].list}}" bg="bg-black" text="text-yellow" bindclick="clickbar"></bar>
+
+
+
+ */
+
 Component({
     /**
      * 组件的属性列表
