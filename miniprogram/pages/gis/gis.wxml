@@ -1,0 +1,20 @@
+<!--pages/gis/gis.wxml-->
+
+
+
+
+
+<view class="{{config.theme}}" hidden="{{false}}">
+
+
+
+    <view  hidden="{{ tabIndex != 0}}">
+        <include src="wxml/data.wxml"  />
+    </view>
+
+    <view hidden="{{ tabIndex != 1}}">
+        <include src="wxml/my.wxml"  />
+    </view>
+        
+    <tabbar matrix="{{tabMatrix}}" index="{{tabbarIndex}}" bindclick="clickTabbar"  bg="bg-white" text="theme-text"></tabbar>
+</view>

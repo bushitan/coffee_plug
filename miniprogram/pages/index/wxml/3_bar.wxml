@@ -1,7 +1,8 @@
 
+<view class="theme-yellow">
+    <bar list="{{tabMatrix[0].list}}" bg="bg-yellow" text="text-white" bindclick="clickbar"></bar>
 
-<bar list="{{tabMatrix[0].list}}" bg="bg-black" text="text-yellow" bindclick="clickbar"></bar>
+    <bar-date></bar-date>
 
-<bar-date></bar-date>
-
-<tabbar matrix="{{tabMatrix}}" index="{{tabbarIndex}}" bindclick="clickTabbar"  bg="bg-black" text="text-red"></tabbar>
+    <tabbar matrix="{{tabMatrix}}" index="{{tabbarIndex}}" bindclick="clickTabbar"  bg="bg-black" text="text-red"></tabbar>
+</view>

@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/gis/gis",
         "pages/index/index",
         "pages/test/test"
     ],
@@ -9,7 +10,9 @@
             "provider": "wxd19bbe9cb3b293b6"
         }
     },
-    "window": {
+    "window": {        
+        "navigationBarBackgroundColor":"#efaf30",
+        "navigationBarTitleText":"频道GIS标签分析"
     },
     "usingComponents": {
         "dialog": "plugin://liteCupPlugin/dialog",

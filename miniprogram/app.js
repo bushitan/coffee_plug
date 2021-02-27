@@ -1,6 +1,12 @@
 // app.js
+var config =  require("behaviors/config.js")
+
 App({
     db:"",
+    
+    behaviors:{
+        config:config,
+    },
     onLaunch() {
         //TODO login
 

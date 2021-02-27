@@ -1,0 +1,47 @@
+
+
+    <view class="cu-list menu-avatar">
+        <view class="cu-item">
+            <open-data class="cu-avatar round lg bg-white" type="userAvatarUrl"></open-data>
+            <view class="content">
+                <view class="text-grey">
+                    <text class="cu-tag round " wx:if="{{userInfo}}">登陆</text>
+                    <open-data class="" type="userNickName"></open-data>
+                </view>
+                <view class="text-gray  text-sm flex">
+                    <text class="text-cut  cu-tag round bg-red ">
+                        <text class=" text-white  ">维护人员</text> 
+                    </text>
+                </view>
+            </view>
+            <view class="action basis-sm flex justify-end padding-right-sm">     
+                <button class="cu-btn round theme-bg sm text-white">切换账户 </button>  
+            </view>                     
+        </view>
+    </view>
+    <view class="cu-form-group margin-top">
+        <view class="title">片区管理</view>
+        <picker bindchange="PickerChange" value="{{index}}" range="{{pickerDevice}}">
+            <view class="picker">
+                青秀区
+            </view>
+        </picker>
+    </view>
+    <!-- <view class="cu-form-group ">
+        <view class="title">参考坐标系</view>
+        <picker bindchange="PickerChange" value="{{index}}" range="{{pickerWCS}}">
+            <view class="picker">
+                WGS-84
+            </view>
+        </picker>
+    </view> -->
+
+    <view></view>
+    <view class="cu-form-group margin-top ">
+        <view class="title">标签记录</view>
+        <picker bindchange="PickerChange" value="{{index}}" range="{{pickerDate}}">
+            <view class="picker">
+                近30天
+            </view>
+        </picker>
+    </view>

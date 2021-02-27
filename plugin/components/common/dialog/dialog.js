@@ -63,14 +63,15 @@ Component({
             console.log("clickDialog")
         },
         touchHideModal(){
-            this.hideModal()
+            if (this.data.isTouchClose) {
+                this.hideModal()
+            }
         },
 
         hideModal(){
-            if (this.data.isTouchClose) {
                 this.setData({ show: false })
                 this.triggerEvent('cancel', "")
-            }
+           
         },
 
         clickConfirm(){

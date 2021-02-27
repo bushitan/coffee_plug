@@ -283,6 +283,118 @@ Page({
         menuList: ProductData,
         menuCart: MenuCartData,
         CurrentItem: CurrentItem,
+
+
+        orderList:[
+            {
+                order: [
+                    {
+                        "key": "0_0_0_0_",
+                        "categoryIndex": "0",
+                        "productIndex": "0",
+                        "ProductId": 143,
+                        "Quantity": 1,
+                        "skuDesc": "",
+                        "cover": "https://wm.51zfgx.com/images/thumbs/0000193_8-oz.jpeg",
+                        "name": "澳白（8 OZ）",
+                        "price": 25
+                    },
+                    {
+                        "key": "0_3_0_1_1_0_",
+                        "categoryIndex": "0",
+                        "productIndex": "3",
+                        "ProductId": 174,
+                        "Quantity": 1,
+                        "skuDesc": "规格【大杯】，甜度【正常】",
+                        "cover": "https://wm.51zfgx.com/images/thumbs/0001251_-12-oz.jpeg",
+                        "name": "热 伊丽莎白 招牌特调（12 OZ）",
+                        "price": 32
+                    },
+                    {
+                        "key": "0_3_0_0_1_0_",
+                        "categoryIndex": "0",
+                        "productIndex": "3",
+                        "ProductId": 174,
+                        "Quantity": 1,
+                        "skuDesc": "规格【中杯】，甜度【正常】",
+                        "cover": "https://wm.51zfgx.com/images/thumbs/0001251_-12-oz.jpeg",
+                        "name": "热 伊丽莎白 招牌特调（12 OZ）",
+                        "price": 30
+                    },
+                    {
+                        "key": "0_3_0_0_1_1_",
+                        "categoryIndex": "0",
+                        "productIndex": "3",
+                        "ProductId": 174,
+                        "Quantity": 2,
+                        "skuDesc": "规格【中杯】，甜度【半糖】",
+                        "cover": "https://wm.51zfgx.com/images/thumbs/0001251_-12-oz.jpeg",
+                        "name": "热 伊丽莎白 招牌特调（12 OZ）",
+                        "price": 31
+                    },
+                    {
+                        "key": "0_3_0_2_1_1_",
+                        "categoryIndex": "0",
+                        "productIndex": "3",
+                        "ProductId": 174,
+                        "Quantity": 3,
+                        "skuDesc": "甜度【半糖】",
+                        "cover": "https://wm.51zfgx.com/images/thumbs/0001251_-12-oz.jpeg",
+                        "name": "热 伊丽莎白 招牌特调（12 OZ）",
+                        "price": 31
+                    }
+                ],
+            },
+            {
+                order: [
+                    {
+                        "key": "0_0_0_0_",
+                        "categoryIndex": "0",
+                        "productIndex": "0",
+                        "ProductId": 143,
+                        "Quantity": 1,
+                        "skuDesc": "",
+                        "cover": "https://wm.51zfgx.com/images/thumbs/0000193_8-oz.jpeg",
+                        "name": "澳白（8 OZ）",
+                        "price": 25
+                    },
+                    
+                    {
+                        "key": "0_3_0_0_1_0_",
+                        "categoryIndex": "0",
+                        "productIndex": "3",
+                        "ProductId": 174,
+                        "Quantity": 1,
+                        "skuDesc": "规格【中杯】，甜度【正常】",
+                        "cover": "https://wm.51zfgx.com/images/thumbs/0001251_-12-oz.jpeg",
+                        "name": "热 伊丽莎白 招牌特调（12 OZ）",
+                        "price": 30
+                    },
+                    {
+                        "key": "0_3_0_0_1_1_",
+                        "categoryIndex": "0",
+                        "productIndex": "3",
+                        "ProductId": 174,
+                        "Quantity": 2,
+                        "skuDesc": "规格【中杯】，甜度【半糖】",
+                        "cover": "https://wm.51zfgx.com/images/thumbs/0001251_-12-oz.jpeg",
+                        "name": "热 伊丽莎白 招牌特调（12 OZ）",
+                        "price": 31
+                    },
+                    {
+                        "key": "0_3_0_2_1_1_",
+                        "categoryIndex": "0",
+                        "productIndex": "3",
+                        "ProductId": 174,
+                        "Quantity": 3,
+                        "skuDesc": "甜度【半糖】",
+                        "cover": "https://wm.51zfgx.com/images/thumbs/0001251_-12-oz.jpeg",
+                        "name": "热 伊丽莎白 招牌特调（12 OZ）",
+                        "price": 31
+                    }
+                ],
+            },
+        ]
     },
 
     // 点击轮播图

@@ -1,0 +1,46 @@
+<!--pages/test/test.wxml-->
+
+<!-- <product-address></product-address> -->
+
+<bar list="{{list}}" bg="" text="text-black" bindclick="clickbar"></bar>
+
+<view class=" padding-sm text-black">
+    <view class="">
+    
+        <!-- <view class="margin-bottom"> -->
+            
+            <order-customer-list list="{{orderList}}"  ></order-customer-list>
+        <!-- </view> -->
+    
+
+    </view>
+    
+</view>
+
+
+
+<!-- <item  title="" desc="" icon=""  catchtap="" customClass="margin-bottom">
+            <text class="" slot="title">订单编号：216372186</text>
+            <text class="text-red" slot="desc">待付款</text>
+        </item>
+
+        <product-cart show="{{!cartShow}}"
+            order="{{cartList}}"   
+            bind:add="add"  
+            bind:cut="cut" 
+        ></product-cart>
+        
+        <item  title="" desc="" icon=""   catchtap="" customClass="margin-top-sm">
+            <text class="  " slot="desc">
+                <text class="margin-right">共4件,合计</text>
+                <text class="text-bold text-black">
+                    <text class="text-price "></text>128.90
+                </text>
+            </text>
+        </item>
+        <item  title="" desc="" icon=""  catchtap="" customClass="margin-top-sm">
+            <text class="text-gray text-sm" slot="title">2021-1-12 12:42:23</text>
+            <view class="text-red" slot="desc">
+                <button class="cu-btn bg-red light radius">去支付</button>
+            </view>
+        </item> -->

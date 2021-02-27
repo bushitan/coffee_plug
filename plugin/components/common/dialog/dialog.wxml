@@ -18,8 +18,8 @@
 
         <view class="cu-bar bg-white justify-end" wx:if="{{showBottom}}">
             <view class="action">
-                <button class="cu-btn theme-line " bindtap="hideModal" wx:if="{{showCancel}}">{{textCancel}}</button>
-                <button class="cu-btn theme-bg text-white margin-left" bindtap="clickConfirm">{{textConfirm}}</button>
+                <button class="cu-btn theme-line " catchtap="hideModal" wx:if="{{showCancel}}">{{textCancel}}</button>
+                <button class="cu-btn theme-bg text-white margin-left" catchtap="clickConfirm">{{textConfirm}}</button>
             </view>
         </view>
 

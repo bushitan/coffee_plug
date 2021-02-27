@@ -19,4 +19,8 @@
 
 
 
-<order-seller-item order="{{menuCart}}"></order-seller-item>
+<!-- <order-seller-item order="{{menuCart}}"></order-seller-item> -->
+<order-customer-list list="{{orderList}}"  ></order-customer-list>
+
+<view class="pg-space-xxl"></view>
+<view class="pg-space-xxl"></view>

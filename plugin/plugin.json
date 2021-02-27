@@ -45,22 +45,22 @@
     "form-date": "components/form/form-date/form-date"
   },
   "pages": {
-    "productMenu": "pages/product/productMenu/productMenu",
-    "productConfirm": "pages/product/productConfirm/productConfirm",
+    "menuCustomer": "pages/menu/menuCustomer/menuCustomer",
 
-    "orderList": "pages/order/orderList/orderList",
-    "orderDetail": "pages/order/orderDetail/orderDetail",
+    "orderCustomerList": "pages/order/orderCustomerList/orderCustomerList",
+    "orderCustomerDetail": "pages/order/orderCustomerDetail/orderCustomerDetail",
+    "orderCustomerConfirm": "pages/order/orderCustomerConfirm/orderCustomerConfirm",
 
-    "storeList": "pages/store/storeList/storeList",
+    "orderSellerList": "pages/order/orderSellerList/orderSellerList",
+    "orderSellerDetail": "pages/order/orderSellerDetail/orderSellerDetail",
 
-    "couponList": "pages/coupon/couponList/couponList",
+    "storeList": "pages/list/storeList/storeList",
+    "couponList": "pages/list/couponList/couponList",
+    "giftList": "pages/list/giftList/giftList",    
+    "scoreList": "pages/list/scoreList/scoreList",
+
     
-    "giftList": "pages/gift/giftList/giftList",
-    
-    "scoreList": "pages/score/scoreList/scoreList",
-
-    
-    "temp": "pages/product/temp/temp",
+    "temp": "pages/menu/temp/temp",
     "hello-page": "pages/hello-page/hello-page"
   },
   "main": "js/route.js"

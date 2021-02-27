@@ -126,8 +126,26 @@ pages  组件目录
 
 
 
+小程序目录
+页面 
+--route
 
-
+--main 
+----index
+------menuCustomer
+--------orderCustomerConfirm
+----------pay
+------menuGift
+----curent
+------orderCustomerDetail
+----my
+------orderCustomerList
+--------orderCustomerDetail
+----------pay
+------scoreList
+------couponList
+------giftList
+--------giftDetail
 
 
 

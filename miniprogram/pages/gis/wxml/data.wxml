@@ -1,0 +1,53 @@
+
+<bar list="{{tabMatrix[0].list}}" bg="bg-yellow" text="text-white" bindclick="clickbar"></bar>
+<bar-date></bar-date>
+
+
+<!-- <item  title="" desc="desc" isIcon="{{true}}" isArrow="{{true}}" catchtap="clickItem" customClass=" text-xl padding">
+    <view class="" slot="title">
+        <view class="cu-progress round sm striped active">
+            <view class="bg-green" style="width:60%;"></view>
+        </view>
+
+    </view>
+    <view class="cu-tag" slot="desc">哈哈哈</view>    
+</item> -->
+
+
+<view class="cuIcon-titles padding text-bold"> 用户收视数据标签 </view>
+<view class="flex align-center margin-bottom padding-lr" wx:for="{{list}}">
+    <text class="margin-right basis-xs text-right">{{item.name}}</text>
+    <view class="cu-progress round sm striped active ">
+        <view class="bg-red" style="width:{{item.value}}%;"></view>
+    </view>
+    <text class="margin-left">{{item.value}}</text>
+</view>
+
+
+
+<view class="cuIcon-titles padding text-bold"> 维护人员标签 </view>
+<view class="flex align-center margin-bottom padding-lr" wx:for="{{listSeller}}">
+    <text class="margin-right basis-xs text-right">{{item.name}}</text>
+    <view class="cu-progress round sm striped active ">
+        <view class="bg-red" style="width:{{item.value}}%;"></view>
+    </view>
+    <text class="margin-left">{{item.value}}</text>
+</view>
+
+<view class="flex justify-center">
+    <button class="cu-btn bg-yellow text-white" catchtap="addTag">添加标签</button>
+</view>
+
+<dialog show="{{showAddTag}}" title="新增用户标签">
+    <view class="bg-white" slot="content">
+        <view>
+            <text class="cu-tag" wx:for="{{tagList}}">{{item}}</text>
+        </view>
+        
+        <item  title="" desc="" icon="" isArrow="{{true}}"   
+            customClass="padding" iconClass="text-xl margin-right-xs"> 
+            <view class="" slot="title">输入新标签</view>
+            <input class=" text-gray text-right" slot="desc" placeholder="选填" placeholder-class="text-gray" ></input>   
+        </item>   
+    </view>
+</dialog> 

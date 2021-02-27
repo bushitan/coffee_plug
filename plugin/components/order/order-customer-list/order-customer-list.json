@@ -2,6 +2,6 @@
     "component": true,
     "usingComponents": {        
         "product-list": "../../../components/product/product-list/product-list",
-        "order-customer-item": "../../components/order/order-customer-item/order-customer-item"
+        "order-customer-item": "../../../components/order/order-customer-item/order-customer-item"
     }
 }

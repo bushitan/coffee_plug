@@ -26,6 +26,11 @@ Component({
             value: "text-yellow",
         },
 
+        textUnselect: {
+            type: String,
+            value: "text-white",
+        },
+
         index: {
             type: Number,
             value: 0,
