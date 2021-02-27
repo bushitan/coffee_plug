@@ -2,6 +2,11 @@
     "pages": [
         "pages/gis/gis",
         "pages/index/index",
+        "pages/cms/list/list",
+        "pages/cms/node/node",
+        "pages/cms/foreign/foreign",
+        "pages/cms/m2m/m2m",
+        
         "pages/test/test"
     ],
     "plugins": {

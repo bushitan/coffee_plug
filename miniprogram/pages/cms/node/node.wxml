@@ -1,0 +1,185 @@
+<!--pages/list/list.wxml--> 
+
+
+<bar list="{{rule.fieldsets}}" bg="bg-white" text="bg-yellow light" textUnselect="" bindclick="clickbar"></bar>
+
+
+<view class="padding-lr">
+    <view wx:for="{{rule.fieldsets}}" wx:for-item="tab" wx:for-index="tabIndex"  wx:key>
+        <view class="cuIcon-titles margin-top  text-yellow">{{tab.name}}</view>
+        <view wx:for="{{tab.fields}}" wx:for-item="field" wx:for-index="fieldIndex"  wx:key >        
+            <template is="number" data="{{ value:node[ field.key] ,field:field }}" wx:if="{{field.type=='number'}}"></template>
+            <template is="text" data="{{ value:node[ field.key] ,field:field }}" wx:if="{{field.type=='text'}}"></template>
+            <template is="image" data="{{ value:node[ field.key] ,field:field }}" wx:if="{{field.type=='image'}}"></template>
+
+            <template is="array" data="{{ value:node[ field.key] ,field:field ,tabIndex:tabIndex,fieldIndex:fieldIndex  }}" 
+                wx:if="{{field.type=='array'}}"></template>
+          
+            <template is="foreign" data="{{ value:node[ field.key] , desc: node[ field.descKey],field:field }}" wx:if="{{field.type=='foreign'}}"></template>
+              <template is="m2m" data="{{ value:node[ field.key],field:field  }}"  wx:if="{{field.type=='m2m'}}"></template>
+        </view>
+    </view>
+
+ </view>
+
+
+<!-- 多对多 -->
+<template name="m2m"> 
+    <item  title="" desc="" icon="" isArrow=""  customClass="margin-top" iconClass="text-xl "> 
+        <view class="" slot="title"> {{field.name}}  <text wx:if="{{value.length == 0 }}" class="text-gray">（数组无数据，请增加）</text></view>
+        <view class=" text-black text-right" slot="desc"  >
+            <button class="cu-btn sm bg-green light"
+                catchtap="selectM2M"                     
+                data-model="{{field.model}}"                 
+                data-key="{{field.key}}"
+            >多选</button>
+        </view>   
+    </item>    
+     
+    <view wx:for="{{value}}" wx:key class="padding-lr">
+        <item  title="" desc="" icon=""  customClass="margin-top-sm" iconClass="text-xl "> 
+            <view class="" slot="title">  {{index + 1 }} 、   </view>
+            <view class="" slot="desc">  {{item.name}} <text class="text-gray">（id:{{item.id}}）</text>   </view>
+        </item>     
+    </view>    
+</template>
+
+
+
+
+
+<!-- 外键-->
+<template name="foreign"> 
+    <item  title="" desc="" icon="" isArrow="" customClass="margin-top" iconClass="text-xl "> 
+        <view class="" slot="title">
+            {{field.name}}<text class="text-gray margin-left-xs" wx:if="{{desc}}">({{desc}})</text>
+            
+        </view>
+        <view class=" text-black text-right" slot="desc"  >
+            <text class="text-gray margin-right-xs">（id:{{value}}）</text>
+            <button class="cu-btn sm bg-green light"
+                catchtap="selectForeign"                     
+                data-model="{{field.model}}"                 
+                data-key="{{field.key}}"             
+                data-desckey="{{field.descKey}}"  
+            >选择</button>
+        </view>   
+    </item>         
+</template>
+
+
+<!-- 数字 -->
+<template name="number"> 
+    <item  title="" desc="" icon="" isArrow="{{!field.disabled}}" customClass="margin-top" iconClass="text-xl "> 
+        <view class="" slot="title">{{field.name}} <text class="text-red"  hidden="{{field.isNull}}">*</text></view>
+        <input class=" text-black text-right" slot="desc" 
+            placeholder="{{field.desc}}" placeholder-class="text-gray" 
+            value="{{value}}"
+            disabled="{{field.disabled}}"></input>   
+    </item>         
+</template>
+
+<!-- 文本 -->
+<template name="text"> 
+    <item  title="" desc="" icon="" isArrow="{{!field.disabled}}" customClass="margin-top" iconClass="text-xl "> 
+        <view class="" slot="title">{{field.name}} <text class="text-red"  hidden="{{field.isNull}}">*</text></view>
+        <input class=" text-black text-right" slot="desc" 
+            placeholder="{{field.desc}}" placeholder-class="text-gray" 
+            value="{{value}}"
+            disabled="{{field.disabled}}"></input>   
+    </item>         
+</template>
+
+
+<!-- 图片 -->
+<template name="image"> 
+    <item  title="" desc="" icon="" isArrow="{{field.isEditor}}" customClass="margin-top" iconClass="text-xl "> 
+        <view class="" slot="title">
+            {{field.name}} <text class="text-red"  hidden="{{field.isNull}}">*</text>
+            <image class="margin-left-xs cu-avatar lg" src="{{value}}"></image>
+            
+        </view>
+        <view class=" text-black text-right" slot="desc"  >
+            <button class="cu-btn sm bg-grey margin-right-sm" wx:if="{{value}}" catchtap="previewImage" data-src="{{value}}" >预览</button>
+            <button class="cu-btn sm bg-green light">上传</button>
+        </view>   
+    </item>         
+</template>
+
+
+<!-- 图片 -->
+<template name="image"> 
+    <item  title="" desc="" icon="" isArrow="{{field.isEditor}}" customClass="margin-top" iconClass="text-xl "> 
+        <view class="" slot="title">
+            {{field.name}} <text class="text-red"  hidden="{{field.isNull}}">*</text>
+            <image class="margin-left-xs cu-avatar lg" src="{{value}}"></image>
+            
+        </view>
+        <view class=" text-black text-right" slot="desc"  >
+            <button class="cu-btn sm bg-grey margin-right-sm" wx:if="{{value}}" catchtap="previewImage" data-src="{{value}}" >预览</button>
+            <button class="cu-btn sm bg-green light">上传</button>
+        </view>   
+    </item>         
+</template>
+
+<!-- 数组 -->
+<template name="array"> 
+    <item  title="" desc="" icon="" isArrow="{{field.isEditor}}" customClass="margin-top" iconClass="text-xl "> 
+        <view class="" slot="title"> {{field.name}}  <text wx:if="{{value.length == 0 }}" class="text-gray">（数组无数据，请增加）</text></view>
+        <view class=" text-black text-right" slot="desc"  >
+            <button class="cu-btn sm bg-green light"
+                catchtap="addArrayNode"                     
+                data-key="{{field.key}}" 
+                data-tabindex="{{tabIndex}}" 
+                data-fieldindex="{{fieldIndex}}" 
+                data-index="{{index}}"
+            >增加</button>
+        </view>   
+    </item>    
+     
+    <view wx:for="{{value}}" wx:key class="padding-lr">
+        <item  title="" desc="" icon="" isArrow="{{field.isEditor}}" customClass="margin-top-sm" iconClass="text-xl "> 
+            <view class="" slot="title">  {{index + 1 }} 、{{item}}   </view>
+            <view class=" text-black text-right" slot="desc"  > 
+                <button class="cu-btn sm bg-grey "  
+                    catchtap="deletArrayNode"                     
+                    data-key="{{field.key}}" 
+                    data-tabindex="{{tabIndex}}" 
+                    data-fieldindex="{{fieldIndex}}" 
+                    data-index="{{index}}"
+                >删除</button>
+                <!-- <button class="cu-btn sm bg-grey ">删除</button> -->
+            </view>   
+        </item>     
+    </view>    
+</template>
+
+
+<!-- 
+    TODO 
+
+    1、text  √
+    2、number √
+    3、图片     √
+    4、轮播图
+    5、富文本
+    6、数组     √
+    7、boolean
+    8、foreign 外键  √
+    9、m2m 多对多
+ -->
+
+
+
+
+
+
+
+
+
+<!-- fields: [
+    { name: "ID", key: 'id', type: "number" },
+    { name: "头像", key: 'logo', type: "image" },
+    { name: "名字", key: 'name', type: "text" },
+    { name: "标签", key: 'tag', type: "array", },
+]  -->

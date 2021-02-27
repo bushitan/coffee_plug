@@ -1,0 +1,85 @@
+<!--pages/list/list.wxml--> 
+
+用户编辑测试
+
+<!-- <view wx:for="{{displayList}}">
+    <item  title="" summary="" desc="" isIcon="{{true}}" isArrow="{{true}}" catchtap="clickItem" customClass="bg-white text-xl padding">
+   
+        <view slot="title"></view>
+        <view slot="desc">
+            <view class="cu-tag bg-red light margin-right"  catchtap="del" data-index="{{index}}">删除</view>
+            <view class="cu-tag bg-green light"  catchtap="editor" data-index="{{index}}">编辑</view>  
+        </view>  
+    </item>
+</view>
+<view wx:for="{{list}}">
+        
+    <item  title="" summary="" desc="" isIcon="{{true}}" isArrow="{{true}}" catchtap="clickItem" customClass="bg-white text-xl padding">
+     
+        <view class="cu-tag" slot="title">{{item.name}}</view>
+        <view slot="desc">
+            <view class="cu-tag bg-red light margin-right"  catchtap="del" data-index="{{index}}">删除</view>
+            <view class="cu-tag bg-green light"  catchtap="editor" data-index="{{index}}">编辑</view>  
+        </view>  
+    </item>
+</view> -->
+
+
+<view class="bg-white ">
+    <!-- <view class="grid col-{{index+1}} margin-bottom text-center" wx:for="{{5}}" wx:key>
+        <view class="{{index%2==0?'bg-cyan':'bg-blue'}} padding" wx:for="{{(index+1)*2}}" wx:key>{{index+1}}</view>
+    </view> -->
+    <view class="grid col-{{rule.displayList.length}}  text-center solid"  >
+        <!-- <view class="{{index%2==0?'bg-cyan':'bg-blue'}} padding" wx:for="{{displayList}}" wx:key>{{item.name}}</view> -->
+        <view class="{{index%2==0?'bg-gray':'bg-white'}} padding-tb-xs " wx:for="{{rule.displayList}}" wx:key>{{item.name}}</view>
+    </view>
+
+    <view wx:for="{{list}}" wx:for-item="node"  wx:for-index="nodeIndex" class=" text-sm" catchtap="editor" data-index="{{nodeIndex}}">
+        <view class="grid   col-{{rule.displayList.length}}  text-center solid"  >
+        
+            <view class="{{index%2==0?'bg-gray':'bg-white'}} padding-tb-xs node flex align-center justify-center " 
+            wx:for="{{rule.displayList}}" wx:key>
+
+                <template is="number" data="{{number:node[ item.key ]}}" wx:if="{{item.type=='number'}}"></template>
+                <template is="text" data="{{text:node[ item.key ]}}" wx:if="{{item.type=='text'}}"></template>
+
+                <template is="image" data="{{src:node[ item.key ]}}" wx:if="{{item.type=='image'}}"></template>
+
+                <template is="array" data="{{list:node[ item.key ]}}" wx:if="{{item.type=='array'}}"></template>
+                <template is="arrayObj" data="{{list:node[ item.key ], objKey: item.objKey}}" wx:if="{{item.type=='arrayObj'}}"></template>
+            </view>
+        </view>
+    </view>
+</view>
+
+<!-- 基础数字 -->
+<template name="number">
+    <text>{{number}}</text>
+</template>
+
+
+<!-- 基础文字 -->
+<template name="text">
+    <text>{{text}}</text>
+</template>
+
+
+<!-- 图片 头像 -->
+<template name="image">
+    <view>
+        <image src="{{src}}" class=" cu-avatar "></image>
+    </view>
+</template>
+
+
+<!-- 纯列表 标签 -->
+<template name="array">
+    <text wx:for="{{list}}" class=" "> {{item}}<text wx:if="{{index<list.length-1}}">,</text></text>
+</template>
+
+<!-- 对象列表，二维 -->
+<template name="arrayObj">
+    <view>
+        <text wx:for="{{list}}"> {{item[objKey]}} <text wx:if="{{index<list.length-1}}">,</text>  </text>
+    </view>
+</template>

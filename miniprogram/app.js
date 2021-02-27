@@ -1,11 +1,13 @@
 // app.js
-var config =  require("behaviors/config.js")
+var config = require("behaviors/config.js")
+var cms = require("behaviors/cms.js")
 
 App({
     db:"",
     
     behaviors:{
         config:config,
+        cms: cms,
     },
     onLaunch() {
         //TODO login
